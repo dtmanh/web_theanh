@@ -1,0 +1,147 @@
+
+.adr.style1.gallery:before, .adr.style1.gallery:after {
+    content: " ";
+    display: table
+}
+
+.adr.style1.gallery:after {
+    clear: both
+}
+
+.adr.style1.gallery:before, .adr.style1.gallery:after {
+    content: " ";
+    display: table
+}
+
+.adr.style1.gallery:after {
+    clear: both
+}
+
+.adr.style1.gallery .navigation {
+    display: block !important;
+    height: 24px;
+    width: 56px !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border:1px solid rgba(204, 204, 204, 0.39);
+    cursor: pointer
+}
+
+.adr.style1.gallery .navigation:hover {
+    border-color: #666
+}
+
+.adr.style1.gallery .navigation.prev {
+    padding:0px !important;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.adr.style1.gallery .navigation.prev:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -3px;
+    margin-left: -6px;
+    background-image: url('spritesheet2.png');
+    background-repeat: no-repeat;
+    display: block;
+    width: 12px;
+    height: 7px;
+    background-position: -27px -5px;
+    opacity: 0.7;
+}
+
+.adr.style1.gallery .navigation.next {
+    padding:0px !important;
+    margin-top: 8px;
+    position: relative;
+}
+
+.adr.style1.gallery .navigation.next:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -3px;
+    margin-left: -6px;
+    background-image: url(spritesheet2.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 12px;
+    height: 7px;
+    background-position: -5px -5px;
+    opacity: 0.7;
+}
+
+.adr.style1.gallery .thumbnails {
+    float: left;
+    width: 56px;
+    margin-right: 8px;
+    position: absolute;
+    z-index: 99;
+}
+
+.adr.style1.gallery .thumbnails>.items>.item {
+    cursor: pointer;
+    border: 1px solid transparent;
+    margin-bottom: 8px
+}
+
+.adr.style1.gallery .thumbnails>.items>.item img {
+    width: 100%
+}
+
+.adr.style1.gallery .thumbnails>.items>.item:hover {
+    border-color: #ccc
+}
+
+.adr.style1.gallery .thumbnails>.items>.active.item {
+    border-color: #333
+}
+
+.adr.style1.gallery .thumbnails>.items>.item[data-type="video"] {
+    position: relative;
+    *display: none
+}
+
+@media \0screen {
+    .adr.style1.gallery .thumbnails>.items>.item[data-type="video"] {
+        display: none
+    }
+}
+
+.adr.style1.gallery .thumbnails>.items>.item[data-type="video"]:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px
+}
+
+.adr.style1.gallery .stage {
+    position: relative;
+    float: left;
+    width: 352px;
+    max-width: 100%;
+}
+
+.adr.style1.gallery .stage img {
+    max-width: 100%
+}
+
+@media (min-width:768px) and (max-width:991px) /*sm*/{
+    .adr.style1.gallery .stage{
+        width: 310px !important;
+    }
+}
+@media (min-width:1200px){
+    .zoomWindowContainer div{
+        width: 500px !important;
+        height: 500px !important;
+    }
+}

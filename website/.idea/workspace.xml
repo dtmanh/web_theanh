@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fb50cd77-c5d0-419b-a14e-2813477aa658" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="ProjectId" id="1iz0cnNZmaG0LUTKY8yCKxghrof" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="PHP Script.Home.php">
+    <configuration name="demo_hethongdien" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Home.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" singleton="false" temporary="true" path="$PROJECT_DIR$/application/controllers/Home.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.Home.php" />
+        <item itemvalue="PHPUnit.demo_hethongdien" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fb50cd77-c5d0-419b-a14e-2813477aa658" name="Default Changelist" comment="" />
+      <created>1602895195787</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602895195787</updated>
+      <workItem from="1602895197021" duration="1052000" />
+      <workItem from="1602896266745" duration="2966000" />
+      <workItem from="1602903211666" duration="6359000" />
+      <workItem from="1603379537786" duration="94000" />
+      <workItem from="1603381232480" duration="41000" />
+      <workItem from="1603519355884" duration="9425000" />
+      <workItem from="1603595902084" duration="8074000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="380" y="89" key="#CLI_Interpreters" timestamp="1602896420642">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="380" y="89" key="#CLI_Interpreters/0.0.1600.870@0.0.1600.870" timestamp="1602896420642" />
+    <state x="635" y="357" key="NewPhpFileDialog" timestamp="1602904327847">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="635" y="357" key="NewPhpFileDialog/0.0.1600.870@0.0.1600.870" timestamp="1602904327847" />
+    <state x="301" y="66" key="SettingsEditor" timestamp="1603596491345">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="301" y="66" key="SettingsEditor/0.0.1600.870@0.0.1600.870" timestamp="1603596491345" />
+    <state x="353" y="163" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602895896034">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="353" y="163" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1600.870@0.0.1600.870" timestamp="1602895896034" />
+    <state x="507" y="34" width="585" height="801" key="find.popup" timestamp="1603610444602">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="507" y="34" width="585" height="801" key="find.popup/0.0.1600.870@0.0.1600.870" timestamp="1603610444602" />
+    <state x="463" y="182" key="search.everywhere.popup" timestamp="1602904306523">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="463" y="182" key="search.everywhere.popup/0.0.1600.870@0.0.1600.870" timestamp="1602904306523" />
+  </component>
+</project>
