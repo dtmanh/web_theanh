@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Map_widget extends MY_Widget
+class Home_giaiphap_widget extends MY_Widget
 {
     // Nhận 2 biến truyền vào
     function index(){

@@ -470,7 +470,7 @@
         // Slide of Most Post
         var mostPost = new Swiper('.category-page .slide-most-post .swiper-container', {
             preventClicks: true,
-            slidesPerView: 2.3,
+            slidesPerView: 4,
             spaceBetween: 30,
             loop: true,
             autoplay: {
@@ -483,13 +483,13 @@
             speed: 1500,
             breakpoints: {
                 1024: {
-                    slidesPerView: 2.3
+                    slidesPerView: 4
                 },
                 768: {
-                    slidesPerView: 2.3
+                    slidesPerView: 3
                 },
                 640: {
-                    slidesPerView: 1.6
+                    slidesPerView: 2
                 },
                 425: {
                     slidesPerView: 1.2,
@@ -603,7 +603,9 @@
             var act = $(window).scrollTop() > 300 ? 'addClass' : 'removeClass';
             $btn[act]('show');
         });
-        $btn.click(function(e) {
+
+        $('#button-top-scroll').click(function(e) {
+            alert(111);
             e.preventDefault();
             $('html, body').animate({
                 scrollTop: 0

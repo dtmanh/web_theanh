@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Blkvideo_left_right_widget extends MY_Widget
+class Home_1_widget extends MY_Widget
 {
     // Nhận 2 biến truyền vào
     function index(){

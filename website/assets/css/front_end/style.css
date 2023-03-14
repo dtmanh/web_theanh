@@ -3073,7 +3073,7 @@ img {
 .main-price .table-price .section-table .element-table {
   background-color: #fff;
   display: flex;
-  flex-basis: 24%;
+  flex-basis: 30%;
   flex-direction: column;
   padding: 45px 10px calc(35px);
   text-align: center;

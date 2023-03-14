@@ -3073,7 +3073,7 @@ img {
 .main-price .table-price .section-table .element-table {
   background-color: #fff;
   display: flex;
-  flex-basis: 24%;
+  flex-basis: 30%;
   flex-direction: column;
   padding: 45px 10px calc(35px);
   text-align: center;
@@ -3524,7 +3524,7 @@ img {
   color: #f15822;
 }
 .main-faq .list-faq .item-faq.active .question:after {
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
 .main-faq .list-faq .item-faq.active .answer {
   height: 100%;
@@ -3538,16 +3538,16 @@ img {
   color: #303030;
   cursor: pointer;
   position: relative;
-  padding-right: 50px;
+  padding-left: 50px;
 }
 .main-faq .list-faq .item-faq .question:after {
   content: "";
   position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 30px;
-  height: 30px;
-  background: url("images/icons/commons/arrow.svg") no-repeat;
+  left: 10px;
+top: 8px;
+width: 20px;
+height: 20px;
+  background: url("../images/Vector-2.svg") no-repeat;
   background-size: contain;
   background-position: center center;
   transition: all 0.5s;
@@ -6371,7 +6371,7 @@ img {
   padding: 0 0 20px;
 }
 .category-page .bgr-banner {
-  background: url("images/bgs/bg-banner-blog.jpg") no-repeat center center;
+  background: url("../images/bg-banner-blog.jpg") no-repeat center center;
   padding: 55px 0 45px;
 }
 .category-page .bgr-banner .banner-category-page {
@@ -8556,6 +8556,10 @@ padding-bottom: 1rem;
   color: #8d8d8d;
   display: block;
 }
+.custom-col-full{
+width:100% !important;
+}
+
 @media only screen and (max-width: 1367px) {
   #home-page .banner .col-banner-left .description-banner {
     margin-top: 30px;

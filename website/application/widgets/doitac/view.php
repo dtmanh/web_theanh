@@ -1,70 +1,27 @@
 <?php if($doitacs){?>
-<section class="doi-tac">
-            <section class="container">
-               <section class="doi-tac-head">
-                  <section class="doi-tac-title tf">
-                     <span>Đối tác phát triển dự án</span>
-                  </section>
-                  <!-- end .doi-tac-title -->
-<section class="doi-tac-des">
-  <?=@$this->option->shipping?>
-</section>
-                  <!-- end .doi-tac-des -->
-                  <section class="doi-tac-content">
-                     <section class="doi-tac-btn doi-tac-btn-prev">
-                        <i class="fa fa-angle-left" aria-hidden="true"></i>
-                     </section>
-                     <!-- end .doi-tac-btn -->
-                     <section class="doi-tac-btn doi-tac-btn-next">
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                     </section>
-                     <!-- end .doi-tac-btn -->
-                     <section class="doi-tac-wrap">
-                        <ul>
-                          <?php foreach($doitacs as $value):?>
-                           <!-- end .doi-tac-item -->
-                           <li class="doi-tac-item fleft">
-                              <section class="doi-tac-item-thumb">
-                                 <img src="<?=base_url($value->image)?>" alt="<?=$value->title?>"/>
-                              </section>
-                              <!-- end .doi-tac-item-thumb -->
-                              <section class="doi-tac-item-title">
-                                <?=$value->title?>                     
-                              </section>
-                              <!-- end .doi-tac-item-title -->
-                           </li>
-                           <!-- end .doi-tac-item -->
-                            <?php endforeach;?>
-                        </ul>
-                     </section>
-                     <!-- end .doi-tac-wrap -->
-                     <script type="text/javascript">
-                        $(document).ready(function() {
-                            var owl_doi_tac = $(".doi-tac-wrap ul");
-                            owl_doi_tac.owlCarousel({
-                                autoPlay: true,
-                                items : 6,
-                                itemsDesktop : [1366,6],
-                                itemsDesktopSmall : [1190,5],
-                                itemsTablet: [870,3],
-                                itemsTabletSmall: false,
-                                itemsMobile : [540,2],
-                                singleItem : false,
-                            });
-                            $(".doi-tac-btn-prev").click(function(){
-                                owl_doi_tac.trigger('owl.prev');
-                            });
-                            $(".doi-tac-btn-next").click(function(){
-                                owl_doi_tac.trigger('owl.next');
-                                item: 1
-                            });
-                        });
-                     </script>
-                  </section>
-                  <!-- end .doi-tac-content -->
-               </section>
-               <!-- end .doi-tac-head -->
-            </section>
-            <!-- end .container -->
-         </section>
+   <div class="section-full-width">
+      <div class="customer">
+            <div class="section-title">
+            <h2>Tăng trưởng nhanh, phủ sóng mạnh với dịch vụ SEO chuyên nghiệp hàng đầu</h2>
+            </div>
+            <div class="section-sub-title">
+            <h3>Thay đổi sức mạnh từng giai đoạn. Liên tục cải tiến trên đa phương diện. Chúng tôi đã giúp 200+ doanh nghiệp hoàn thành kế hoạch phát triển mong đợi! </h3>
+            </div>
+            <div class="list-customer">
+            <ul>
+            <?php foreach($doitacs as $value):?>
+               <li>
+                  <img width="1026" height="606" src="<?=base_url($value->image)?>" data-lazy-src="<?=base_url($value->image)?>">
+                  <noscript><img width="1026" height="606" src="<?=base_url($value->image)?>"></noscript>
+               </li>
+               <?php endforeach;?>
+            </ul>
+            </div>
+            <div class="button-website text-center">
+            <a href="<?=base_url('khach-hang')?>" id="btn-normal">
+            CÂU CHUYỆN KHÁCH HÀNG
+            </a>
+            </div>
+      </div>
+   </div>
 <?php } ?>

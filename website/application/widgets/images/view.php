@@ -7,6 +7,7 @@
             <div class="row_6 imgRow">
                 <?php if(count($media)) : ?>
                 <?php foreach ($media as $item) : ?>
+
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-480-12 pdd_6">
                     <div class="img_album_item reRenderImg hvr-shadow-radial">
                         <a href="<?=base_url('media-detail/'.$item->alias.'.html')?>" title="" rel="">

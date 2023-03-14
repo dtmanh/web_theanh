@@ -1,17 +1,23 @@
-<?php if (is_array($news)) {
-                    foreach ($news as $key => $new) { ?>
-<li class="ep-news-small-li">
-                                    <div class="ep-news-small-ava">
-                                        <a href="<?= base_url('new/'.$new->alias.'.html')?>"
-                                           title="<?= $new->title?>"
-                                           class="kscliw-ava"
-                                           style="background-image: url('<?= base_url($new->image)?>')"></a>
-                                    </div>
-                                    <h3 class="ep-news-small-title">
-                                        <a href="<?= base_url('new/'.$new->alias.'.html')?>"
-                                           title="<?= $new->title?>"><?= $new->title?></a>
-                                    </h3>
-                                </li>
-
-                    <?php   }
-                } ?>
+<?php if (is_array($news)) { ?>
+<div class="most-post">
+    <div class="title">
+    Bài viết xem nhiều nhất
+    </div>
+    <div class="slide-most-post">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <?php 
+                  foreach ($news as $key => $new) { ?>
+                     <?=@$this->load->views('temp/news', $new);?>
+                <?php } ?>    
+            </div>
+            <div class="custom-paginate">
+                <div class="swiper-button-next">
+                </div>
+                <div class="swiper-button-prev">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php } ?>

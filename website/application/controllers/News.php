@@ -10,23 +10,23 @@ class News extends MY_Controller
         $this->load->library('pagination');
     }
     protected $pagination_config= array(
-        'full_tag_open'=>"<ul class='pagination phantrang'>",
-        'full_tag_close'=>"</ul>",
+        'full_tag_open'=>"",
+        'full_tag_close'=>"",
         'first_link' => 'Trang đầu',
         'last_link' => 'Trang cuối',
         'num_links' => 2,
-        'num_tag_open'=>'<li>',
-        'num_tag_close'=>'</li>',
-        'cur_tag_open'=>"<li class='disabled'><li class='active'><a href='#'>",
-        'cur_tag_close'=>"<span class='sr-only'></span></a></li>",
-        'next_tag_open'=>"<li>",
-        'next_tagl_close'=>"</li>",
-        'prev_tag_open'=>"<li>",
-        'prev_tagl_close'=>"</li>",
-        'first_tag_open'=>"<li>",
-        'first_tagl_close'=>"</li>",
-        'last_tag_open'=>"<li>",
-        'last_tagl_close'=>"</li>",
+        'num_tag_open'=>'',
+        'num_tag_close'=>'',
+        'cur_tag_open'=>"<span aria-current='page' class='page-numbers current' href='#'>",
+        'cur_tag_close'=>"<span class='sr-only'></span></a>",
+        'next_tag_open'=>"",
+        'next_tagl_close'=>"",
+        'prev_tag_open'=>"",
+        'prev_tagl_close'=>"",
+        'first_tag_open'=>"",
+        'first_tagl_close'=>"",
+        'last_tag_open'=>"",
+        'last_tagl_close'=>"",
     );
     //News by category
     public function new_bycategory($alias){

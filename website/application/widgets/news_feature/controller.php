@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class News_left_two_widget extends MY_Widget
+class News_feature_widget extends MY_Widget
 {
     // Nhận 2 biến truyền vào
     function index(){

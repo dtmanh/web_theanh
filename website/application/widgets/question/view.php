@@ -1,57 +1,55 @@
-<div class="row">
-    <div class=" danh-gia col-md-12 clearfix" id="view_question">
-        <div class="danhgia-5 col-md-5 col-sm-5 col-xs-12 clearfix">
-            <span><p>Bạn có câu hỏi với sản phẩm này ?</p></span>
-
-            <button type="button" class="btn-bl" onclick="write_question()" style="margin-bottom: 5px">
-                <a   data-scrollTo="#product_comments"
-                     style="cursor: pointer; color: #fff" >
-                    Đặt câu hỏi</a>
-            </button><br/>
-
-        </div><!--end danhgia-3-->
-        <!--comment_content-->
-    </div>
-</div>
-<div id="question_write" style="display: none">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="loading"></div>
-            <form action="" method="POST" id="question_form">
-                <table class="tbl-post-comment">
-                    <tbody>
-                    <tr>
-                        <td valign="top" style="padding-top:5px;">
-                            <img src="<?= base_url().$avata;?>" alt="<?= @$username ?>" style="margin-left: 2em;">
-                        </td>
-                        <td>
-                            <div class="info_comment">
-                                <input type="text" class="validate[required]" id = "username" name="username" placeholder="Nhập tên bạn" value="<?= @$username ?>">
-                                <input type="text" class="validate[required,custom[email]]"  id = "user_email" name="user_email" placeholder="Nhập email của bạn" value="<?= @$usermail ?>">
-                                <input type="hidden" name="avatar" value="0">
-                            </div>
-                            <p style="font-size:13px; margin:5px 0"><b>Nội dung</b> (Vui lòng viết tiếng Việt có dấu)</p>
-                            <textarea name="user_comment" class="form-control validate[required]"  rows="4" value="Nội dung chi tiết" id = "user_comment"></textarea>
-                            <div class="clear"></div>
-
-                            <!--<div id="captchaimg">
-                                <img  src="<?/*=base_url()*/?>assets/css/img/captcha.jpg"><br>
-                            </div>
-                            <input type="text" style="width:150px" name="captcha" placeholder="Nhập mã xác nhận"> (<a id="change-image">Xem mã khác</a>)-->
-                            <div class="c5"></div>
-                            <div class="clearfix-15"></div>
-                            <div class="col-sm-4">
-                                <input type="button" class="btn-sm btn-cm" onclick="send_questions(<?=@$itemId;?>);" name="dsubmit" id="commentSubmit" value="Gửi">
-                                <input type="button" class="btn-sm btn-cm"  value="Hủy" onclick="close_question()" id="btn_sent">
-                                <input type="hidden" name="comment_post_ID" value="<?=@$itemId;?>" id="comment_post_ID">
-                                <input type="hidden" name="comment_parent" id="comment_parent" value="0">
-                            </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </form>
-
+<div class="bgr-main-table">
+    <div class="container">
+        <div class="main-faq">
+        <div class="section-title">
+            <h2>Một số câu hỏi thường gặp</h2>
+        </div>
+        <div class="list-faq">
+            <div class="item-faq">
+                <div class="question" data-click="0" data-index="">Chi phí của chữ ký số của 1Office thanh toán theo các gói như thế nào?</div>
+                <div class="answer">
+                    <p>Chi phí của Chữ ký số 1CA của 1Office phụ thuộc vào nhu cầu sử dụng của khách hàng. Các gói dịch vụ chính sẽ có mức phí khác nhau theo <strong>12 tháng, 24 tháng, 36 tháng. </strong>Cụ thể:</p>
+                    <ul>
+                    <li>Chữ ký số doanh nghiệp</li>
+                    <li>Chữ ký số cá nhân thuộc doanh nghiệp</li>
+                    <li>Chữ ký số trong Hợp đồng lao động &#8211; eContract</li>
+                    <li>Để nhận báo giá tốt nhất, doanh nghiệp liên hệ trực tiếp tới tư vấn viên: <strong>0834 838 888</strong></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item-faq">
+                <div class="question" data-click="0" data-index="">Các thủ tục đăng ký chữ ký số 1Office như thế nào, cần chuẩn bị gì?</div>
+                <div class="answer">
+                    <p>Để làm thủ tục đăng ký chữ ký số 1Office, doanh nghiệp, tổ chức, cá nhân có nhu cầu cần chuẩn bị hồ sơ bao gồm:</p>
+                    <p><strong>a) Đối với tổ chức, doanh nghiệp</strong></p>
+                    <p>Để đăng ký chữ ký số, doanh nghiệp cần chuẩn bị đầy đủ các giấy tờ sau:<br />
+                    &#8211; Bản sao có công chứng giấy phép đăng ký kinh doanh hoặc Bản sao có công chứng giấy phép hoạt động;<br />
+                    &#8211; Bản sao có công chứng chứng minh thư nhân dân của người đại diện pháp lý (hoặc hộ chiếu).<br />
+                    thủ tục đăng ký chữ ký số
+                    </p>
+                    <p><strong>b) Đối với cá nhân</strong></p>
+                    <p>Đối với cá nhân, chỉ cần bản sao công chứng CMND hoặc hộ chiếu của người sử dụng chữ ký số là có thể đăng ký được.</p>
+                </div>
+            </div>
+            <div class="item-faq">
+                <div class="question" data-click="0" data-index="">Chữ ký số có sử dụng được cho hợp đồng lao động không?</div>
+                <div class="answer">
+                    <p>Hiện nay, tất cả các nghiệp vụ trong doanh nghiệp đều có thể sử dụng chữ ký số 1Office: Hợp đồng lao động, hợp đồng thương mại, các chứng từ nội bộ trong doanh nghiệp <strong>(đề nghị tạm ứng, quyết định khen thưởng,&#8230;)</strong></p>
+                </div>
+            </div>
+            <div class="item-faq">
+                <div class="question" data-click="0" data-index="">Nếu đối tác của doanh nghiệp không sử dụng 1Office thì có thể thực hiện ký số không?</div>
+                <div class="answer">
+                    <p>Đối với hợp đồng thương mại, doanh nghiệp dùng 1Office ký bằng chữ ký số HSM còn đối tác của doanh nghiệp có thể sử dụng USB Token ký vào đó. Vì vậy, giao dịch vẫn có thể diễn ra bình thường.</p>
+                </div>
+            </div>
+            <div class="item-faq">
+                <div class="question" data-click="0" data-index="">Sử dụng chữ ký số trên 1Office như nào?</div>
+                <div class="answer">
+                    <p>Sau khi tạo công việc từ Quy trình mẫu ký số, người dùng hoàn toàn có thể thực hiện thao tác ký ngay trên công việc quy trình. Người dùng có thể Upload file hoặc thực hiện ký trên File có sẵn.</p>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 </div>
