@@ -6,7 +6,7 @@ class Home_left_widget extends MY_Widget
     function index(){
 		$data = array();
 		$data['social']=$this->load->widget('social');
-        /*begin content*/$data['danhmuc']=$this->load->widget('danhmuc');$data['support']=$this->load->widget('support');$data['counter']=$this->load->widget('counter');$data['news_left_one']=$this->load->widget('news_left_one');$data['news_left_two']=$this->load->widget('news_left_two');/*end content*/
+        /*begin content*/$data['danhmuc']=$this->load->widget('danhmuc');$data['support']=$this->load->widget('support');$data['counter']=$this->load->widget('counter');$data['news_left_one']=$this->load->widget('news_left_one');/*end content*/
 		$this->load->view('common/left', $data);
     }
 }

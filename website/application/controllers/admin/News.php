@@ -562,7 +562,9 @@
              }else{
                 $this->session->set_flashdata("mess", "Xóa không thành công ! <br />Còn danh mục con");
              }
-            redirect($_SERVER['HTTP_REFERER']);
+            
+             redirect($this->agent->referrer(), 'refresh');
+            // redirect($_SERVER['HTTP_REFERER']);
         }
         //Delete Cate News
         public function deletes_category()
@@ -575,7 +577,6 @@
                 }
             }
 			$this->session->set_flashdata("mess", "Xóa thành công!");
-            
             redirect($_SERVER['HTTP_REFERER']);
         }
         public function del_cat_once($id){

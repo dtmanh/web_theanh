@@ -9,11 +9,11 @@ class Banner_widget extends MY_Widget
 
 
 		//nội dung
-		$data['slides'] = $this->f_homemodel->getField('images','title,image,id',array(
-            'type' => 'banner',
+		$data['slides'] = $this->f_homemodel->getField('images','title,name,content, image,id',array(
+            'type' => 'slide',
             // 'lang' => $this->language
         ));
-
-			$this->load->view('view',$data);
+       
+		$this->load->view('view',$data);
     }
 }

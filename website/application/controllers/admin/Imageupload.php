@@ -65,12 +65,14 @@ class Imageupload extends MY_Controller
 
         $data['btn_name']='Thêm';
 		if($id_edit){
-            $data['edit']=$this->system_model->getField('images','id,title,image,cate,url,content,type',array('id'=>$id_edit),array());
+            $data['edit']=$this->system_model->getField('images','id,title,name,image,cate,url,content,type',array('id'=>$id_edit),array());
+          
             $data['btn_name']='Cập nhật';
         }
         if (isset($_POST['addnews'])) {
 			$arr = array(
-				'type' => $this->input->post('type'),
+				'name' => $this->input->post('name'),
+                'type' => $this->input->post('type'),
 				'url' => $this->input->post('url'),
 				'target' => $this->input->post('target'),
 				'title' => $this->input->post('title'),

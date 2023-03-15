@@ -9,10 +9,10 @@
                     <h3><?=@$slides->title?></h3>
                 </div>
                 <div class="title-banner">
-                    <h1>TIÊN PHONG TRONG <span style="color: #000000;">CHUYỂN ĐỔI SỐ</span></h1>
+                    <h1><?=@$slides->name?></h1>
                 </div>
                 <div class="description-banner">
-                    <?=base_url(@$slides->description)?>                      
+                    <?=@$slides->content?>                      
                 </div>
                 <div class="button-banner">
                     <a href="javascript:void(0)" id="btn-registration">

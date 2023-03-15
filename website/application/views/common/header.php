@@ -63,7 +63,7 @@
                <header id="header-page">
                   <div class="logo-header">
                      <a href="index.html" id="logo">
-                        <img width="169" height="57" src="<?=base_url(@$this->option->site_logo); ?>" alt="<?=@$this->option->site_name; ?>" data-lazy-src="<?=@$this->option->site_name; ?>">
+                        <img width="169" height="57" src="<?=base_url(@$this->option->site_logo); ?>" alt="<?=@$this->option->site_name; ?>" data-lazy-src="<?=@$this->option->site_logo; ?>">
                         <noscript><img width="169" height="57" src="<?=base_url(@$this->option->site_logo); ?>" alt="<?=@$this->option->site_name; ?>" ></noscript>
                      </a>
                   </div>
@@ -72,8 +72,8 @@
                      <a id="btn-registration">
                         <span>Đăng ký</span>
                         <span>
-                           <img src="<?=base_url()?>assets/css/images/Vector-2.svg" data-lazy-src="<?=base_url()?>assets/css/images/Vector-2.svg" />
-                           <noscript><img src="<?=base_url()?>assets/css/images/Vector-2.svg" /></noscript>
+                           <img src="<?=base_url()?>assets/css/img/Vector-2.svg" data-lazy-src="<?=base_url()?>assets/css/img/Vector-2.svg" />
+                           <noscript><img src="<?=base_url()?>assets/css/img/Vector-2.svg" /></noscript>
                         </span>
                      </a>
                   </div>

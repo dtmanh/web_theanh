@@ -92,6 +92,18 @@
 
                                 </div>
                             </div>
+                            <div class="form-group">
+
+                                <label  class="col-sm-12">Sub tiêu Đề </label>
+
+                                <div class="col-sm-12">
+
+                                    <input type="text" class="form-control input-sm" name="name"
+
+                                        value="<?=@$edit->name;?>" placeholder=""/>
+
+                                </div>
+                            </div>
     						<div class="form-group">
 
     							<label  class="col-sm-12">Vị trí:</label>

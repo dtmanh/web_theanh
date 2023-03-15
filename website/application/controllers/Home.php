@@ -124,27 +124,27 @@ class Home extends MY_Controller
 
      
         /*begin controller home*/
-        $data['news_nb']=$this->load->widget('news_nb');
-        $data['news_noibat_home']=$this->load->widget('news_noibat_home');
-        $data['news_home']=$this->load->widget('news_home');
-        $data['news_left_one']=$this->load->widget('news_left_one');
+        // $data['news_nb']=$this->load->widget('news_nb');
+        // $data['news_noibat_home']=$this->load->widget('news_noibat_home');
+        // $data['news_home']=$this->load->widget('news_home');
+        // $data['news_left_one']=$this->load->widget('news_left_one');
 
-        $data['news_4']= $this->system_model->get_data('news',array(
-            'lang' => $this->language,
-            'button_1' => 1,
-        ),array('id' => 'desc'),false,7,3);
-        if (is_array($data['news_4'])) {
-            foreach ($data['news_4']  as $key => $item) {
-                $category = $this->system_model->getField('news_category','id,name,alias',array(
-                    'id'=>$item->category_id),
-                    array(),true);
-                $data['news_4'][$key]->category_name =  $category->name;
-                $data['news_4'][$key]->category_alias =  $category->alias;
-            }
-        }
+        // $data['news_4']= $this->system_model->get_data('news',array(
+        //     'lang' => $this->language,
+        //     'button_1' => 1,
+        // ),array('id' => 'desc'),false,7,3);
+        // if (is_array($data['news_4'])) {
+        //     foreach ($data['news_4']  as $key => $item) {
+        //         $category = $this->system_model->getField('news_category','id,name,alias',array(
+        //             'id'=>$item->category_id),
+        //             array(),true);
+        //         $data['news_4'][$key]->category_name =  $category->name;
+        //         $data['news_4'][$key]->category_alias =  $category->alias;
+        //     }
+        // }
 
-        $data['morong']=$this->load->widget('morong');
-        $data['cat_news_home']=$this->load->widget('cat_news_home');/*end controller home*/
+        // $data['morong']=$this->load->widget('morong');
+        // $data['cat_news_home']=$this->load->widget('cat_news_home');/*end controller home*/
         /*begin slide_header*//*end slide_header*/
        $seo = array();
        $this->LoadHeader($view=null,$seo,true);
