@@ -145,7 +145,7 @@ class Menu extends MY_Controller
 		$this->check_acl();
         $this->load->helper('model_helper');
         $config['upload_path'] = './upload/img/menus/';
-        $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|PNG|GIF|JPEG';
+        $config['allowed_types'] = 'gif|jpg|png|jpeg|svg|JPG|PNG|GIF|JPEG|SVG';
         $config['max_size'] = '*';
         $config['max_width'] = '2000';
         $config['max_height'] = '1000';
@@ -234,7 +234,7 @@ class Menu extends MY_Controller
                     $upload= array('upload_data' => $this->upload->data());
                     $image = 'upload/img/menus/'.$upload['upload_data']['file_name'];
                     $arr = array('image'=>$image);
-                    $this->news_model->Update_where('menu', array('id'=>$id), $arr);
+                    $this->system_model->Update_where('menu', array('id'=>$id), $arr);
                 }
             }
 			

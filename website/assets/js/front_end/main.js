@@ -1,6 +1,10 @@
 (function($) {
     // Sticky menu
     $(function() {
+        $('#submit').click(function() {
+           alert(2222);
+        });
+
         $("#event").click(function(event) {
             this.paused ? this.play() : this.pause();
         });
@@ -115,6 +119,7 @@
         // Disable submit form after submit
         var disableSubmit = false;
         $('#submit.wpcf7-submit').click(function() {
+            alert(11);
             $(this).attr('value',"Đang gửi...")
             if (disableSubmit == true) {
                 return false;

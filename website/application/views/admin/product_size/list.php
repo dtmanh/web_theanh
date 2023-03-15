@@ -120,13 +120,13 @@
 
 								<a class="btn btn-xs btn-default"
 
-								   href="<?= base_url('techadmin/attribute/editoption/' . $v->id) ?>"><i
+								   href="<?= base_url('techadmin/attribute/editsize/' . $v->id) ?>"><i
 
 										class="fa fa-pencil"></i> </a>
 
 								<a class="btn btn-xs btn-danger"
 
-								   href="<?= base_url('techadmin/attribute/delete_size_once/' . $v->id) ?>" title="Xóa"
+								   href="<?= base_url('techadmin/attribute/deletesizecategory/' . $v->id) ?>" title="Xóa"
 
 								   onclick="return confirm('Bạn có chắc chắn muốn xóa?')"><i
 

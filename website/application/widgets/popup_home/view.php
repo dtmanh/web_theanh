@@ -3,7 +3,7 @@
 	<p role="status" aria-live="polite" aria-atomic="true"></p>
 	<ul></ul>
 	</div>
-	<form action="/contact/dang_ky" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+	<form action="<?=base_url(); ?>contact/dang_ky" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
 	<div id="pop-up-block">
 		<div id="lead-form">
 			<div class="lead-form">
@@ -37,11 +37,10 @@
 						<div class="section-input">
 							<p>
 							<span class="wpcf7-form-control-wrap" data-name="menu-261">
-								<select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="menu-261">
+								<select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="locale_id">
 									<?php
-									foreach(@$province as $t){?>
-										<option value="<?=$t->provinceid;?>"
-											<?=@$edit->tinh_thanh==$t->provinceid?'selected':''?>>
+									foreach(@$product_locale as $t){?>
+										<option value="<?=$t->id;?>">
 											<?=$t->name;?></option>
 									<?php }
 									?>	
@@ -71,15 +70,13 @@
 					<div class="group-form">
 						<div class="section-input">
 							<p>
-							<span class="wpcf7-form-control-wrap" data-name="menu-861">
-								<select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="size_id">
-									<?php
-									foreach(@$province as $t){?>
-										<option value="<?=$t->provinceid;?>"
-											<?=@$edit->tinh_thanh==$t->provinceid?'selected':''?>>
-											<?=$t->name;?></option>
-									<?php }
-									?>	
+							<span class="wpcf7-form-control-wrap" data-name="title">
+								<select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="title">
+									<option value="Dưới 10 nhân viên">Dưới 10 nhân viên</option>
+									<option value="10 - 30 nhân viên">10 - 30 nhân viên</option>
+									<option value="30 - 100 nhân viên">30 - 100 nhân viên</option>
+									<option value="100 - 300 nhân viên">100 - 300 nhân viên</option>
+									<option value="Trên 300 nhân viên">Trên 300 nhân viên</option>
 								</select>
 							</span>
 							</p>
@@ -88,15 +85,15 @@
 					<div class="group-form">
 						<div class="section-input">
 							<p>
-							<span class="wpcf7-form-control-wrap" data-name="menu-337">
-								<select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="address">
-									<?php
+							<span class="wpcf7-form-control-wrap" data-name="size_id">
+								<select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="country">
+								<?php
 									foreach(@$province as $t){?>
-										<option value="<?=$t->provinceid;?>"
-											<?=@$edit->tinh_thanh==$t->provinceid?'selected':''?>>
+										<option value="<?=$t->id;?>">
 											<?=$t->name;?></option>
 									<?php }
-									?>	
+									?>
+									
 								</select>
 							</span>
 							</p>
@@ -107,14 +104,14 @@
 					<div class="section-input">
 						<p>
 							<span class="wpcf7-form-control-wrap" data-name="menu-626">
-							<select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="locale_id">
-								<?php
-									foreach(@$province as $t){?>
-										<option value="<?=$t->provinceid;?>"
-											<?=@$edit->tinh_thanh==$t->provinceid?'selected':''?>>
+							<select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="size_id">
+								
+							<?php
+									foreach(@$product_size as $t){?>
+										<option value="<?=$t->id;?>">
 											<?=$t->name;?></option>
 									<?php }
-									?>
+									?>	
 							</select>
 							</span>
 						</p>
@@ -122,7 +119,7 @@
 				</div>
 				<div class="group-form">
 					<div id="submit-form">
-						<p><input class="wpcf7-form-control has-spinner wpcf7-submit" id="submit" type="submit" value="ĐĂNG KÝ" />
+						<p><input class="wpcf7-form-control has-spinner wpcf7-submit" name="dang-ky" id="submit" type="submit" value="ĐĂNG KÝ" />
 						</p>
 					</div>
 				</div>

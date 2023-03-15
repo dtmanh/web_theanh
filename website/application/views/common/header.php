@@ -41,8 +41,9 @@
     <link rel='preload'  href='<?=base_url()?>assets/css/front_end/style.css?ver=3.1' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" type='text/css' media='all' />
     <script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='<?=base_url()?>assets/js/front_end/jquery.min.js?ver=3.6.1' id='jquery-core-js'></script>
     <link rel="preload" href="<?=base_url()?>assets/css/fonts/hustle-icons-font.woff2" as="font" type="font/woff2" crossorigin>
-     <link rel="preload" href="<?=base_url()?>assets/css/front_end/cache_style.css" data-rocket-async="style" as="style" media="all" data-minify="1" />
-   </head>
+    <link rel="preload" href="https://1office.vn/wp-content/plugins/wordpress-popup/assets/hustle-ui/fonts/hustle-icons-font.woff2" as="font" type="font/woff2" crossorigin="">
+      <link rel="preload" href="<?=base_url()?>assets/css/front_end/website_cache.css" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all" data-minify="1" />
+    </head>
    <body class="home page-template-default page page-id-2">
     <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];

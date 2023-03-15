@@ -158,11 +158,12 @@ class Contact extends MY_Controller
         if(isset($_POST['dang-ky'])){
             $arr=array('full_name' => $this->input->post('full_name'),
                 'phone' => $this->input->post('phone'),
-                //'title' => $this->input->post('title'),
+                'title' => $this->input->post('title'),
                 'email' => $this->input->post('email'),
                 'address' => $this->input->post('address'),
                 'cat_name' => $this->input->post('cat_name'),
-                'comment' => $this->input->post('comment'),
+                'locale_id' => $this->input->post('locale_id'),
+                'size_id' => $this->input->post('size_id'),
                 'time' => time(),
             );
             $config = Array(
@@ -176,8 +177,8 @@ class Contact extends MY_Controller
                 'wordwrap'  => TRUE
             );
             $this->load->library('email', $config);
-            $subject = 'Thông tin liên hệ ';
-            $message = '<p>Thông tin của khách hàng liên hệ như sau:</p>';
+            $subject = 'Thông tin đăng ký nhận tư vấn ';
+            $message = '<p>Thông tin của khách hàng đăng ký nhận tư vấn như sau:</p>';
             $message .='<p>Họ và tên :'.$this->input->post('full_name').'<p>';
             $message .='<p>Số điện thoại :'.$this->input->post('phone').'<p>';
             $message .='<p>Email:'.$this->input->post('email').'<p>';
@@ -213,6 +214,7 @@ class Contact extends MY_Controller
             if($id){
                 $this->session->set_flashdata("mess", "Bạn đã gửi thông tin liên hệ thành công!");
             }
+            
             $this->session->set_flashdata("message", array('msg'=>'Bạn đã gửi thông tin liên hệ thành công!','type'=>'success'));
             redirect(base_url());
         }

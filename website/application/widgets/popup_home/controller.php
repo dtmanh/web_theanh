@@ -13,7 +13,10 @@ class Popup_home_widget extends MY_Widget
             // 'type' => 'ads_left',
             /*'lang' => $this->language*/
         ));
-				
+		$data['province'] = $this->f_homemodel->get_data('province');
+        $data['product_locale'] = $this->f_homemodel->get_data('product_locale');
+        $data['product_size'] = $this->f_homemodel->get_data('product_size');
+
 			$this->load->view('view',$data);
     }
 }

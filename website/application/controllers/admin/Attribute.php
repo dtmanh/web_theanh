@@ -228,9 +228,10 @@ class Attribute extends MY_Controller
         $data['max_sort']=$this->system_model->SelectMax('product_locale','sort')+1;
         if($id_edit!=null){
             $data['edit']=$this->system_model->get_data('product_locale',array('id'=>$id_edit),array(),true);
-            $data['cate_selected'] = $this->system_model->getField_array('brand_to_locale','brand_id',
-               array('locale_id'=>$id_edit));
+            // $data['cate_selected'] = $this->system_model->getField_array('brand_to_locale','brand_id',
+            //    array('locale_id'=>$id_edit));
             $data['btn_name']='Cập nhật';
+            $data['max_sort']=$data['edit']->sort;
         }
         if (isset($_POST['addnews'])) {
             $alias = make_alias($this->input->post('name'));
@@ -269,17 +270,17 @@ class Attribute extends MY_Controller
                 ));
             }
 
-            if($id){
-                 if (isset($_POST['category']) && sizeof($_POST['category']) > 0) {
-                     $post_cat = $_POST['category'];
-                     $this->system_model->Delete_where('brand_to_locale', array('locale_id' => $id));
-                     for ($i = 0; $i < sizeof($post_cat); $i++) {
-                         $ca = array('locale_id' => $id, 'brand_id' => $post_cat[$i]);
-                         $this->system_model->Add('brand_to_locale', $ca);
-                     }
-                 }
-              $a= $this->system_model->Update_where('product_locale', array('id'=>$id), array('parent_id' => end($post_cat)));
-             }
+            // if($id){
+            //      if (isset($_POST['category']) && sizeof($_POST['category']) > 0) {
+            //          $post_cat = $_POST['category'];
+            //          $this->system_model->Delete_where('brand_to_locale', array('locale_id' => $id));
+            //          for ($i = 0; $i < sizeof($post_cat); $i++) {
+            //              $ca = array('locale_id' => $id, 'brand_id' => $post_cat[$i]);
+            //              $this->system_model->Add('brand_to_locale', $ca);
+            //          }
+            //      }
+            //   $a= $this->system_model->Update_where('product_locale', array('id'=>$id), array('parent_id' => end($post_cat)));
+            //  }
 
             if ($_FILES['userfile']['name'] != '') {
                 if (!$this->upload->do_upload()) {
@@ -706,7 +707,7 @@ class Attribute extends MY_Controller
                 $this->session->set_flashdata("mess", "Thêm thành công!");
             }
 
-            redirect(base_url('techadmin/attribute/listOption'));
+            redirect(base_url('techadmin/attribute/listsize'));
         }
 
          foreach ($this->session->userdata('phanquyen') as $key => $cat) {
@@ -750,7 +751,7 @@ class Attribute extends MY_Controller
         $this->session->set_flashdata("mess", "Xóa thành công!");
         redirect($_SERVER['HTTP_REFERER']);
     }
-      public function delete_size_once($id)
+    public function delete_size_once($id)
     {
         $this->check_acl();
         // xoa ban ghi trong product_brand
