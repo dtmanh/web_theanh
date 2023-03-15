@@ -30,5 +30,4 @@
     </div>
  </section>
  <?=@$this->load->widget('home_giaiphap');?>
-
 <!-- end home page -->

@@ -9,11 +9,11 @@ class Popup_home_widget extends MY_Widget
 		
 			
 		//nội dung 
-		$data['popup'] = $this->f_homemodel->get_data('images',array(
-            'type' => 'ads_left',
+		$data['popup'] = $this->f_homemodel->get_data('contact',array(
+            // 'type' => 'ads_left',
             /*'lang' => $this->language*/
         ));
-		//var_dump($data['popup']);die;		
+				
 			$this->load->view('view',$data);
     }
 }

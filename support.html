@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-   <!-- /Added by HTTrack -->
    <head>
       <script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(e){this.triggerEvents=e,this.eventOptions={passive:!0},this.userEventListener=this.triggerListener.bind(this),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventListener,e.eventOptions)))}_removeUserInteractionListener(e){this.triggerEvents.forEach((t=>window.removeEventListener(t,e.userEventListener,e.eventOptions)))}triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}async _loadEverythingNow(){this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async),await this._triggerDOMContentLoaded(),await this._triggerWindowLoad(),window.dispatchEvent(new Event("rocket-allScriptsLoaded"))}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._requestAnimFrame(),new Promise((t=>{const n=document.createElement("script");let i;[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type",i=e.nodeValue),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")&&this._isValidScriptType(i)?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t()),e.parentNode.replaceChild(n,e)}))}_isValidScriptType(e){return!e||""===e||"string"==typeof e&&["text/javascript","text/x-javascript","text/ecmascript","text/jscript","application/javascript","application/x-javascript","application/ecmascript","application/jscript","module"].includes(e.toLowerCase())}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){var e=document.createDocumentFragment();[...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async].forEach((t=>{const n=t.getAttribute("src");if(n){const t=document.createElement("link");t.href=n,t.rel="preload",t.as="script",e.appendChild(t)}})),document.head.appendChild(e)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._requestAnimFrame(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-load")),await this._requestAnimFrame(),window.rocketonload&&window.rocketonload(),await this._requestAnimFrame(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),window.dispatchEvent(new Event("rocket-pageshow")),await this._requestAnimFrame(),window.rocketonpageshow&&window.rocketonpageshow()}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript;n||console.error("WPRocket unable to document.write this: "+t);const i=document.createRange(),r=n.parentElement;let a=e.get(n);void 0===a&&(a=n.nextSibling,e.set(n,a));const o=document.createDocumentFragment();i.setStart(o,0),o.appendChild(i.createContextualFragment(t)),r.insertBefore(o,a)}}async _requestAnimFrame(){return new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts(["keydown","mousemove","touchmove","touchstart","touchend","wheel"]);e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
       <meta charset="UTF-8">
@@ -22,7 +21,6 @@
       </script>
       <!-- End Google Tag Manager -->
       <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-      <!-- This site is optimized with the Yoast SEO plugin v20.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
       <link rel="canonical" href="../support-docs.html" />
       <meta property="og:locale" content="vi_VN" />
       <meta property="og:type" content="article" />
@@ -768,7 +766,7 @@
                      <div class="container">
                         <div class="search-banner">
                            <p class="description">
-                              Trung tâm hỗ trợ của 1Office
+                              Tổng đài ho tro
                               <span class="line">
                               -
                               </span>
@@ -799,383 +797,338 @@
                      <div class="container">
                         <div class="option-page">
                            <div class="title-option">
+                              <img src="https://bizweb.dktcdn.net/100/319/535/themes/806337/assets/icon-guide.png?1671500718813" style="float: left;vertical-align: middle;max-width: 100%;width: 24px;
+    margin-right: 15px;">
                               <h3>
                                  Hương dan su dung                             
                               </h3>
                            </div>
-                           <div class="section-list-col-3 section-list-col-4">
-                              <a class="box-option" href="../feature/bat-dau/index.html">
-                                 <div class="icon" style="margin:none">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/cai-dat-he-thong.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/cai-dat-he-thong.svg" /></noscript>
+                           <div class="section-list-col-3">
+                              <div class="box-option section-list-col-2">
+                                 <div class="icon" style="margin-right: 20px;">
+                                    <img src="https://bizweb.dktcdn.net/100/319/535/collections/asset-1-1.png?v=1568771436013" data-lazy-src="https://bizweb.dktcdn.net/100/319/535/collections/asset-1-1.png?v=1568771436013" />
+                                    <noscript><img src="https://bizweb.dktcdn.net/100/319/535/collections/asset-1-1.png?v=1568771436013" /></noscript>
                                  </div>
-								 <div style="float:left">
-                                 <div class="title">
-                                    <h3>
-                                       Bắt đầu                                        
-                                    </h3>
+                                 <div class="content">
+                                    <div class="title">
+                                       <h3>
+                                          Bắt đầu                                        
+                                       </h3>
+                                    </div>
+                                    <div class="description">
+                                       5 bước cơ bản để bắt đầu sử dụng 1Office                                    
+                                    </div>
                                  </div>
-                                 <div class="description">
-                                    5 bước cơ bản để bắt đầu sử dụng 1Office                                    
-                                 </div>
-								</div>
-                              </a>
-                              <a class="box-option" href="../feature/nang-cao/index.html">
-                                 <div class="icon">
+                              </div>
+                              <div class="box-option section-list-col-2">
+                                 <div class="icon" style="margin-right: 20px;">
                                     <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/cai-dat-nang-cao.svg" />
                                     <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/cai-dat-nang-cao.svg" /></noscript>
                                  </div>
-                                 <div class="title">
-                                    <h3>
-                                       Nâng cao                                        
-                                    </h3>
+                                 <div class="content">
+                                    <div class="title">
+                                       <h3>
+                                          Nâng cao                                        
+                                       </h3>
+                                    </div>
+                                    <div class="description">
+                                       Hướng dẫn cơ bản về cài đặt nâng cao                                    
+                                    </div>
                                  </div>
-                                 <div class="description">
-                                    Hướng dẫn cơ bản về cài đặt nâng cao                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../tip/faq-workplace/index.html">
+                              </div>
+                              <div class="box-option section-list-col-2">
                                  <div class="icon">
                                     <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/danh-gia-nang-luc.svg" />
                                     <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/danh-gia-nang-luc.svg" /></noscript>
                                  </div>
-                                 <div class="title">
-                                    <h3>
-                                       Câu hỏi thường gặp                                        
-                                    </h3>
+                                 <div class="content">
+                                    <div class="title">
+                                       <h3>
+                                          Câu hỏi thường gặp                                        
+                                       </h3>
+                                    </div>
+                                    <div class="description">
+                                       Tổng hợp những câu hỏi thường gặp                                    
+                                    </div>
                                  </div>
-                                 <div class="description">
-                                    Tổng hợp những câu hỏi thường gặp                                    
-                                 </div>
-                              </a>
-                           </div>
-                        </div>
-                        <div class="option-page">
-                           <div class="title-option">
-                              <h3>
-                                 WORKPLACE                                
-                              </h3>
-                           </div>
-                           <div class="section-list-col-3 section-list-col-4">
-                              <a class="box-option" href="../feature/mang-noi-bo/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/mang-noi-bo.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/mang-noi-bo.svg" /></noscript>
-                                 </div>
-                                 <div class="title">
-                                    <h3>
-                                       Mạng nội bộ                                        
-                                    </h3>
-                                 </div>
-                                 <div class="description">
-                                    Hướng dẫn cách xây dựng văn hóa doanh nghiệp                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../feature/cong-viec/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/cong-viec.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/cong-viec.svg" /></noscript>
-                                 </div>
-                                 <div class="title">
-                                    <h3>
-                                       Công việc                                        
-                                    </h3>
-                                 </div>
-                                 <div class="description">
-                                    Tạo công việc mới và kiểm soát tiến độ công việc                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../feature/tai-lieu/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/tai-lieu.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/tai-lieu.svg" /></noscript>
-                                 </div>
-                                 <div class="title">
-                                    <h3>
-                                       Tài liệu                                        
-                                    </h3>
-                                 </div>
-                                 <div class="description">
-                                    Cách tải tài liệu và xem tài liệu trên hệ thống                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../feature/lich-bieu/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/lich-bieu.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/lich-bieu.svg" /></noscript>
-                                 </div>
-                                 <div class="title">
-                                    <h3>
-                                       Lịch biểu                                        
-                                    </h3>
-                                 </div>
-                                 <div class="description">
-                                    Tạo sự kiện, cuộc họp và xem lịch biểu cá nhân                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../feature/van-ban/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/don-tu.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/don-tu.svg" /></noscript>
-                                 </div>
-                                 <div class="title">
-                                    <h3>
-                                       Văn bản                                        
-                                    </h3>
-                                 </div>
-                                 <div class="description">
-                                    Quản lý văn bản đi, văn bản đến                                    
-                                 </div>
-                              </a>
-                           </div>
-                        </div>
-                        <div class="option-page">
-                           <div class="title-option">
-                              <h3>
-                                 HRM                                
-                              </h3>
-                           </div>
-                           <div class="section-list-col-3 section-list-col-4">
-                              <a class="box-option" href="../feature/don-tu/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/don-tu.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/don-tu.svg" /></noscript>
-                                 </div>
-                                 <div class="title">
-                                    <h3>
-                                       Đơn từ                                        
-                                    </h3>
-                                 </div>
-                                 <div class="description">
-                                    Tạo mới đơn từ, xem đơn từ cá nhân và phòng ban                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../feature/tuyen-dung/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/tuyen-dung.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/tuyen-dung.svg" /></noscript>
-                                 </div>
-                                 <div class="title">
-                                    <h3>
-                                       Tuyển dụng                                        
-                                    </h3>
-                                 </div>
-                                 <div class="description">
-                                    Tạo lập quy trình tuyển dụng khép kín                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../feature/nhan-su/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/ho-so-nhan-su.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/ho-so-nhan-su.svg" /></noscript>
-                                 </div>
-                                 <div class="title">
-                                    <h3>
-                                       Nhân sự                                        
-                                    </h3>
-                                 </div>
-                                 <div class="description">
-                                    Hướng dẫn cách tạo mới hồ sơ nhân sự                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../feature/danh-gia-nang-luc/index.html">
+                              </div>
+                              <div class="box-option section-list-col-2">
                                  <div class="icon">
                                     <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/danh-gia-nang-luc.svg" />
                                     <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/danh-gia-nang-luc.svg" /></noscript>
                                  </div>
-                                 <div class="title">
-                                    <h3>
-                                       Đánh giá năng lực                                        
-                                    </h3>
+                                 <div class="content">
+                                    <div class="title">
+                                       <h3>
+                                          Câu hỏi thường gặp                                        
+                                       </h3>
+                                    </div>
+                                    <div class="description">
+                                       Tổng hợp những câu hỏi thường gặp                                    
+                                    </div>
                                  </div>
-                                 <div class="description">
-                                    Tạo tiêu chí đánh giá khung năng lực ASK                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../feature/cham-cong/index.html">
+                              </div>
+                              <div class="box-option section-list-col-2">
                                  <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/cham-cong.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/cham-cong.svg" /></noscript>
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/danh-gia-nang-luc.svg" />
+                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/danh-gia-nang-luc.svg" /></noscript>
                                  </div>
-                                 <div class="title">
-                                    <h3>
-                                       Chấm công                                        
-                                    </h3>
+                                 <div class="content">
+                                    <div class="title">
+                                       <h3>
+                                          Câu hỏi thường gặp                                        
+                                       </h3>
+                                    </div>
+                                    <div class="description">
+                                       Tổng hợp những câu hỏi thường gặp                                    
+                                    </div>
                                  </div>
-                                 <div class="description">
-                                    Phân ca làm việc và cài đặt chính sách chấm công                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../feature/tien-luong/index.html">
+                              </div>
+                              <div class="box-option section-list-col-2">
                                  <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/tien-luong.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/tien-luong.svg" /></noscript>
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/danh-gia-nang-luc.svg" />
+                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/danh-gia-nang-luc.svg" /></noscript>
                                  </div>
-                                 <div class="title">
-                                    <h3>
-                                       Tiền lương                                        
-                                    </h3>
+                                 <div class="content">
+                                    <div class="title">
+                                       <h3>
+                                          Câu hỏi thường gặp                                        
+                                       </h3>
+                                    </div>
+                                    <div class="description">
+                                       Tổng hợp những câu hỏi thường gặp                                    
+                                    </div>
                                  </div>
-                                 <div class="description">
-                                    Hướng dẫn cài đặt dưới dạng hàm Execl                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../feature/quan-ly-kpi/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/kpi.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/kpi.svg" /></noscript>
-                                 </div>
-                                 <div class="title">
-                                    <h3>
-                                       Quản lý KPI                                        
-                                    </h3>
-                                 </div>
-                                 <div class="description">
-                                    Quản lý các tiêu chí, chỉ tiêu KPI                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../feature/tai-san/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/tai-san.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/tai-san.svg" /></noscript>
-                                 </div>
-                                 <div class="title">
-                                    <h3>
-                                       Tài sản                                        
-                                    </h3>
-                                 </div>
-                                 <div class="description">
-                                    Tạo thông tin trình trạng các loại tài sản.                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../feature/dao-tao/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/tai-lieu.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/tai-lieu.svg" /></noscript>
-                                 </div>
-                                 <div class="title">
-                                    <h3>
-                                       Đào tạo                                        
-                                    </h3>
-                                 </div>
-                                 <div class="description">
-                                    Thiết lập và quản lý các khóa đào tạo                                    
-                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="title-option" style="margin-top:50px;    border-bottom: 1px solid #d6d6d6;
+    padding-bottom: 10px;">
+                              <img src="https://bizweb.dktcdn.net/100/319/535/themes/806337/assets/icon-question.png?1671500718813" style="float: left;vertical-align: middle;max-width: 100%;width: 47px;
+    margin-right: 15px;">
+                              <h3>
+                                 Cau hoi thuong gap                      
+                              </h3>
+                              <a class="viewMore" href="/faqs" style="float:right">
+                                 <img src="https://bizweb.dktcdn.net/100/319/535/themes/806337/assets/icon-viewmore.png?1671500718813" style="width:26px">
+                                 Xem thêm câu hỏi
                               </a>
                            </div>
-                        </div>
-                        <div class="option-page">
+
+                           <div class="main-faq">
+                           
+                        <div class="list-faq">
+                           <div class="item-faq">
+                <div class="question" data-click="0" data-index="">Chi phí của chữ ký số của 1Office thanh toán theo các gói như thế nào?</div>
+                <div class="answer">
+                    <p>Chi phí của Chữ ký số 1CA của 1Office phụ thuộc vào nhu cầu sử dụng của khách hàng. Các gói dịch vụ chính sẽ có mức phí khác nhau theo <strong>12 tháng, 24 tháng, 36 tháng. </strong>Cụ thể:</p>
+                    <ul>
+                    <li>Chữ ký số doanh nghiệp</li>
+                    <li>Chữ ký số cá nhân thuộc doanh nghiệp</li>
+                    <li>Chữ ký số trong Hợp đồng lao động &#8211; eContract</li>
+                    <li>Để nhận báo giá tốt nhất, doanh nghiệp liên hệ trực tiếp tới tư vấn viên: <strong>0834 838 888</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+                            <div class="item-faq">
+                                <h2 onclick="showFaq(this)" class="question" style="padding-left:40px"><span class="number-circle" style="background: #0088ff;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #fff;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    position: absolute;
+    top: 3px;
+    left: 0;">1</span> Muốn thay đổi ảnh bìa và ảnh đại diện trên tường cá nhân thì làm thế nào?</h2>
+                                <div class="answer">
+                                    <p><span data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Để thay đổi ảnh đại diện hoặc ảnh bìa trên trường cá nhân, bạn truy cập vào Tường cá nhân của mình và thực hiện các thao tác:\n1. Thay ảnh đại diện: Trỏ chuột vào ảnh đại diện hiện tại của bạn > click vào biểu tượng bánh răng > Chọn ảnh đại diện mới, sau đó thay thế bằng ảnh bạn mong muốn\n2. Thay ảnh bìa: Trỏ chuột vào ảnh bìa hiện tại của bạn > click vào biểu tượng bánh răng > Chọn ảnh đại diện mới, sau đó thay thế bằng ảnh bạn mong muốn&quot;}" data-sheets-userformat="{&quot;2&quot;:957,&quot;3&quot;:{&quot;1&quot;:0},&quot;5&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;6&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;7&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;8&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;10&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}" data-sheets-textstyleruns="{&quot;1&quot;:0}{&quot;1&quot;:227,&quot;2&quot;:{&quot;5&quot;:1}}{&quot;1&quot;:248}{&quot;1&quot;:380,&quot;2&quot;:{&quot;5&quot;:1}}{&quot;1&quot;:401}">Để thay đổi ảnh đại diện hoặc ảnh bìa trên trường cá nhân, bạn truy cập vào Tường cá nhân của mình và thực hiện các thao tác:<br>
+1. Thay ảnh đại diện: Trỏ chuột vào ảnh đại diện hiện tại của bạn &gt; click vào biểu tượng bánh răng <img decoding="async" class="size-full wp-image-15272 alignnone" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2036%2032'%3E%3C/svg%3E" alt="" width="36" height="32" data-lazy-src="https://1office.vn/wp-content/uploads/2020/09/Screenshot_7.png"><noscript><img decoding="async" class="size-full wp-image-15272 alignnone" src="https://1office.vn/wp-content/uploads/2020/09/Screenshot_7.png" alt="" width="36" height="32" /></noscript>&gt; <strong>Chọn ảnh đại diện mới</strong>, sau đó thay thế bằng ảnh bạn mong muốn.<br>
+2. Thay ảnh bìa: Trỏ chuột vào ảnh bìa hiện tại của bạn &gt; click vào biểu tượng bánh răng<img decoding="async" class="size-full wp-image-15272 alignnone" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2036%2032'%3E%3C/svg%3E" alt="" width="36" height="32" data-lazy-src="https://1office.vn/wp-content/uploads/2020/09/Screenshot_7.png"><noscript><img decoding="async" class="size-full wp-image-15272 alignnone" src="https://1office.vn/wp-content/uploads/2020/09/Screenshot_7.png" alt="" width="36" height="32" /></noscript> &gt; <strong>Chọn ảnh đại diện mới</strong>, sau đó thay thế bằng ảnh bạn mong muốn.</span></p>
+                                </div>
+                            </div>
+                                                        <div class="item-faq">
+                                <h2 onclick="showFaq(this)" class="question">Không muốn công khai thông tin cá nhân của nhân sự trên tường cá nhân thì làm thế nào?</h2>
+                                <div class="answer">
+                                    <p><span data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Để ẩn các thông tin cá nhân hiển thị trên tường của nhân sự, bạn truy cập vào mục cài đặt Social bằng cách click chọn vào biểu tượng mũi tên ở góc phải màn hình > chọn Cài đặt hệ thống > chọn phân hệ Social > Tại đây bạn hãy lựa chọn thông tin nào được phép hiển thị, thông tin nào được phép ẩn&quot;}" data-sheets-userformat="{&quot;2&quot;:957,&quot;3&quot;:{&quot;1&quot;:0},&quot;5&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;6&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;7&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;8&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;10&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}" data-sheets-textstyleruns="{&quot;1&quot;:0}{&quot;1&quot;:169,&quot;2&quot;:{&quot;5&quot;:1}}{&quot;1&quot;:185}{&quot;1&quot;:201,&quot;2&quot;:{&quot;5&quot;:1}}{&quot;1&quot;:208}">Để ẩn các thông tin cá nhân hiển thị trên tường của nhân sự, bạn truy cập vào mục cài đặt Social bằng cách click chọn vào biểu tượng mũi tên ở góc phải màn hình <img decoding="async" class="alignnone wp-image-14920 size-full" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20287%2047'%3E%3C/svg%3E" alt="" width="287" height="47" data-lazy-src="https://1office.vn/wp-content/uploads/2020/07/mũi-têb-1.png"><noscript><img decoding="async" class="alignnone wp-image-14920 size-full" src="https://1office.vn/wp-content/uploads/2020/07/mũi-têb-1.png" alt="" width="287" height="47" /></noscript> &gt; chọn <strong>Cài đặt hệ thống</strong> &gt; chọn phân hệ <strong>Social</strong> &gt; Tại đây bạn hãy lựa chọn thông tin nào được phép hiển thị, thông tin nào được phép ẩn.</span></p>
+                                </div>
+                            </div>
+                                                        <div class="item-faq">
+                                <h2 onclick="showFaq(this)" class="question">Đơn làm thêm và Đơn tăng ca khác nhau như thế nào?</h2>
+                                <div class="answer">
+                                    Nội dung đang cập nhật...                                </div>
+                            </div>
+                                                        <div class="item-faq">
+                                <h2 onclick="showFaq(this)" class="question">Nếu chỉ cho phép nhân viên tạo đơn sau 1 ngày xảy ra sự việc thì phải thực hiện cài đặt như thế nào?</h2>
+                                <div class="answer">
+                                    Nội dung đang cập nhật...                                </div>
+                            </div>
+                                           
+                                                    </div>
+                                               
+                                            </div>
+
+
                            <div class="title-option">
+                              <img src="https://bizweb.dktcdn.net/100/319/535/themes/806337/assets/icon-guide.png?1671500718813" style="float: left;vertical-align: middle;max-width: 100%;width: 24px;
+    margin-right: 15px;">
                               <h3>
-                                 CRM                                
+                                 Video hương dan su dung                             
                               </h3>
                            </div>
                            <div class="section-list-col-3 section-list-col-4">
-                              <a class="box-option" href="../feature/marketing/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/mkt.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/mkt.svg" /></noscript>
+                                 <div class="video-item">
+                                    <a href="javascript:;" data-src="https://www.youtube.com/embed/mTzi8-U05BE?autoplay=1?autoplay=1" data-fancybox="video" title="[Sapo POS] 02 - Hướng dẫn quản lý đơn hàng với phần mềm Sapo phần 1">
+                                       <img src="https://bizweb.dktcdn.net/thumb/large/100/319/535/products/44109332-1900526959982683-726223624805023744-n-506d0bdb-e5f5-45e6-b821-af7d3b40ceb7.jpg?v=1559185932893" alt="[Sapo POS] 02 - Hướng dẫn quản lý đơn hàng với phần mềm Sapo phần 1">
+                                       <span class="play"><img src="https://www.iconpacks.net/icons/2/free-icon-play-button-4209.png" data-lazy-src="https://www.iconpacks.net/icons/2/free-icon-play-button-4209.png" /></span>
+                                       <span class="title">[Sapo POS] 02 - Hướng dẫn quản lý đơn hàng...</span>
+                                    </a>
                                  </div>
-                                 <div class="title">
-                                    <h3>
-                                       Marketing                                        
-                                    </h3>
+                                 <div class="video-item">
+                                    <a href="javascript:;" data-src="https://www.youtube.com/embed/mTzi8-U05BE?autoplay=1?autoplay=1" data-fancybox="video" title="[Sapo POS] 02 - Hướng dẫn quản lý đơn hàng với phần mềm Sapo phần 1">
+                                       <img src="https://bizweb.dktcdn.net/thumb/large/100/319/535/products/44109332-1900526959982683-726223624805023744-n-506d0bdb-e5f5-45e6-b821-af7d3b40ceb7.jpg?v=1559185932893" alt="[Sapo POS] 02 - Hướng dẫn quản lý đơn hàng với phần mềm Sapo phần 1">
+                                       <span class="play"><img src="https://www.iconpacks.net/icons/2/free-icon-play-button-4209.png" data-lazy-src="https://www.iconpacks.net/icons/2/free-icon-play-button-4209.png" /></span>
+                                       <span class="title">[Sapo POS] 02 - Hướng dẫn quản lý đơn hàng...</span>
+                                    </a>
                                  </div>
-                                 <div class="description">
-                                    Tạo mới các chiến dịch Marketing                                    
+                                 <div class="video-item">
+                                    <a href="javascript:;" data-src="https://www.youtube.com/embed/mTzi8-U05BE?autoplay=1?autoplay=1" data-fancybox="video" title="[Sapo POS] 02 - Hướng dẫn quản lý đơn hàng với phần mềm Sapo phần 1">
+                                       <img src="https://bizweb.dktcdn.net/thumb/large/100/319/535/products/44109332-1900526959982683-726223624805023744-n-506d0bdb-e5f5-45e6-b821-af7d3b40ceb7.jpg?v=1559185932893" alt="[Sapo POS] 02 - Hướng dẫn quản lý đơn hàng với phần mềm Sapo phần 1">
+                                       <span class="play"><img src="https://www.iconpacks.net/icons/2/free-icon-play-button-4209.png" data-lazy-src="https://www.iconpacks.net/icons/2/free-icon-play-button-4209.png" /></span>
+                                       <span class="title">[Sapo POS] 02 - Hướng dẫn quản lý đơn hàng...</span>
+                                    </a>
                                  </div>
-                              </a>
-                              <a class="box-option" href="../feature/khach-hang/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/cskh.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/cskh.svg" /></noscript>
-                                 </div>
-                                 <div class="title">
-                                    <h3>
-                                       Khách hàng                                        
-                                    </h3>
-                                 </div>
-                                 <div class="description">
-                                    Quản lý danh sách chăm sóc khách hàng                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../feature/ban-hang/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/ban-hang.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/ban-hang.svg" /></noscript>
-                                 </div>
-                                 <div class="title">
-                                    <h3>
-                                       Bán hàng                                        
-                                    </h3>
-                                 </div>
-                                 <div class="description">
-                                    Tạo mới báo giá, đơn hàng, hợp đồng, khuyến mại, doanh số                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../feature/thu-chi/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/so-quy.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/so-quy.svg" /></noscript>
-                                 </div>
-                                 <div class="title">
-                                    <h3>
-                                       Thu chi                                        
-                                    </h3>
-                                 </div>
-                                 <div class="description">
-                                    Tạo công - nợ, thu chi rõ ràng                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../feature/kho-hang/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/hang-hoa.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/hang-hoa.svg" /></noscript>
-                                 </div>
-                                 <div class="title">
-                                    <h3>
-                                       Kho hàng                                        
-                                    </h3>
-                                 </div>
-                                 <div class="description">
-                                    Xem danh mục hàng hóa, chính sách giá                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../feature/mua-hang/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/mua-hang.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/mua-hang.svg" /></noscript>
-                                 </div>
-                                 <div class="title">
-                                    <h3>
-                                       Mua hàng                                        
-                                    </h3>
-                                 </div>
-                                 <div class="description">
-                                    Cách tạo mới đơn hàng mua                                    
-                                 </div>
-                              </a>
-                              <a class="box-option" href="../feature/tien-ich/index.html">
-                                 <div class="icon">
-                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/tien-ich.svg" />
-                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/tien-ich.svg" /></noscript>
-                                 </div>
-                                 <div class="title">
-                                    <h3>
-                                       Tiện ích                                        
-                                    </h3>
-                                 </div>
-                                 <div class="description">
-                                    Cách kết nối đến tổng đài điện thoại                                    
-                                 </div>
-                              </a>
+                                
                            </div>
+                           <style>
+                           .section-list-col-3 .video-item {
+    margin-bottom: 15px;
+    position: relative;
+}
+.video-item a img {
+    width: 100%;
+}
+.video-item a .play {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 30px;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    opacity: 0.9;
+    line-height: 47px;
+    padding-left: 5px;
+    text-align: center;
+}
+.video-item a .title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    line-height: normal;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+                           </style>
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="section-full-width">
+                  <div class="bgr-banner" style="background: url(https://bizweb.dktcdn.net/100/319/535/themes/806337/assets/bg-sendrequest.jpg?1653015347858) no-repeat center center;
+    padding: 49px 0 34px;
+    width: 100%;">
+                     <div class="container">
+                        <div class="option-page" id="suppport">
+                           <div class="title-option">
+                              <img src="https://bizweb.dktcdn.net/100/319/535/themes/806337/assets/icon-sendrequest.png?1671500718813" style="float: left;vertical-align: middle;max-width: 100%;width: 40px;
+    margin-right: 15px;">
+                              <h3>
+                                 Cac kenh ho tro                        
+                              </h3>
+                           </div>
+                           <div class="section-list-col-4 section-list-col-4">
+                                <a class="box-option" href="https://1office.vn/feature/bat-dau/">
+                                    <div class="icon">
+                                        <img src="https://1office.vn//wp-content/themes/1office/images/icons/menu/cai-dat-he-thong.svg" class="lazyloaded" data-ll-status="loaded"><noscript><img src="https://1office.vn//wp-content/themes/1office/images/icons/menu/cai-dat-he-thong.svg" /></noscript>
+                                    </div>
+                                    <div class="title">
+                                        <h3>
+                                            Bắt đầu                                        </h3>
+                                    </div>
+                                  
+                                </a>
+                                 
+                                <a class="box-option" href="https://1office.vn/feature/nang-cao/">
+                                    <div class="icon">
+                                        <img src="https://1office.vn//wp-content/themes/1office/images/icons/menu/cai-dat-nang-cao.svg" class="lazyloaded" data-ll-status="loaded"><noscript><img src="https://1office.vn//wp-content/themes/1office/images/icons/menu/cai-dat-nang-cao.svg" /></noscript>
+                                    </div>
+                                    <div class="title">
+                                        <h3>
+                                            Nâng cao                                        </h3>
+                                    </div>
+                                  
+                                </a>
+                                 
+                                <a class="box-option" href="https://1office.vn/tip/faq-workplace/">
+                                    <div class="icon">
+                                        <img src="https://1office.vn//wp-content/themes/1office/images/icons/menu/danh-gia-nang-luc.svg" class="lazyloaded" data-ll-status="loaded"><noscript><img src="https://1office.vn//wp-content/themes/1office/images/icons/menu/danh-gia-nang-luc.svg" /></noscript>
+                                    </div>
+                                    <div class="title">
+                                        <h3>
+                                            Câu hỏi thường gặp                                        </h3>
+                                    </div>
+                                    
+                                </a>
+                                <a class="box-option" href="https://1office.vn/tip/faq-workplace/">
+                                    <div class="icon">
+                                        <img src="https://1office.vn//wp-content/themes/1office/images/icons/menu/danh-gia-nang-luc.svg" class="lazyloaded" data-ll-status="loaded"><noscript><img src="https://1office.vn//wp-content/themes/1office/images/icons/menu/danh-gia-nang-luc.svg" /></noscript>
+                                    </div>
+                                    <div class="title">
+                                        <h3>
+                                            Câu hỏi thường gặp                                        </h3>
+                                    </div>
+                                </a>
+
+
+                            </div>
+                           <style>
+                           #suppport .section-list-col-4 {
+    grid-gap: 20px;
+}
+ #suppport .icon {
+height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+  #suppport .title{
+   text-align:center; font-size: 16px;
+    color: #fff;
+    margin: 15px 0 18px;
+    line-height: 1.4;
+    font-weight: 400;
+ }
+
+                           </style>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
          </section>
+         
 		 <footer id="footer-page">
             <div class="container">
                <div class="menu-footer">
