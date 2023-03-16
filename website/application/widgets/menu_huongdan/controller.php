@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Morong_widget extends MY_Widget
+class Menu_huongdan_widget extends MY_Widget
 {
     // Nhận 2 biến truyền vào
     function index(){

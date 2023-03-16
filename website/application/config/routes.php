@@ -87,8 +87,8 @@ $route['lien-he'] = 'contact';
 $route['contact'] = 'contact';
 $route['tin-da-luu/([a-zA-Z0-9_-]+)'] = 'products/tindaluu/$1';
 // tim kiem
-//$route['tim-kiem'] = 'search/searchNew';
- $route['tim-kiem'] = 'search/searchPro';
+$route['tim-kiem'] = 'search/searchNew';
+//  $route['tim-kiem'] = 'search/searchPro';
 // add email
 $route['lien-he/email'] = 'contact/add_email';
 // binh luan
@@ -173,7 +173,7 @@ $route['addCart_now'] = 'cart/addCart_now';
 $route['spreadsheet'] = 'PhpspreadsheetController';
 $route['spreadsheet/import'] = 'PhpspreadsheetController/import';
 $route['spreadsheet/export'] = 'PhpspreadsheetController/export';
-
+$route['support'] = "home/support";
 
 //filtes
 $route['loc-san-pham'] = 'filters/filter';

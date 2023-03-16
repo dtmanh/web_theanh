@@ -146,12 +146,18 @@ class Home extends MY_Controller
         // $data['morong']=$this->load->widget('morong');
         // $data['cat_news_home']=$this->load->widget('cat_news_home');/*end controller home*/
         /*begin slide_header*//*end slide_header*/
-       $seo = array();
-       $this->LoadHeader($view=null,$seo,true);
-      $this->load->view('home/view_home',$data);
+        $seo = array();
+        $this->LoadHeader($view=null,$seo,true);
+        $this->load->view('home/view_home',$data);
         $this->LoadFooter();
     }
 
+    public function support(){ 
+        $seo = array();
+        $this->LoadHeader($view=null,$seo,true);
+        $this->load->view('home/support',$data);
+        $this->LoadFooter();
+    }
 /**
  * Clears all cache from the cache directory
  */

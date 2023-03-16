@@ -79,14 +79,14 @@ class Search extends MY_Controller
     public function searchNew(){
         
         $key=$this->input->get('s');
-        $id = $this->input->get('cat');
+        // $id = $this->input->get('cat');
         $data = array();
 
 
         $where=array();
         if($this->input->get()){
             $where = array(
-                'id' => $this->input->get('cat'),
+                // 'id' => $this->input->get('cat'),
                 'key' => $this->input->get('s'),
             );
         }
@@ -95,7 +95,7 @@ class Search extends MY_Controller
         }
         $config['page_query_string'] = TRUE;
         $config['enable_query_strings'] = TRUE;
-        $config['base_url'] = base_url('tim-kiem?cat='.$this->input->get('cat').'&s='.$this->input->get('s'));
+        $config['base_url'] = base_url('tim-kiem?s='.$this->input->get('s'));
         $config['total_rows'] = $this->f_search->countNew_search($where); // xác định tổng số record
         $config['per_page'] = 8;
         $config['uri_segment'] =2;
