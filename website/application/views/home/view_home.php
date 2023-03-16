@@ -15,8 +15,8 @@
                 <a href="javascript:void(0)" id="btn-registration">
                     Dùng thử miền phí
                     <span>
-                        <img src="<?=base_url()?>assets/css/images/Vector.svg" data-lazy-src="<?=base_url()?>assets/css/images/Vector.svg" />
-                        <noscript><img src="<?=base_url()?>assets/css/images/Vector.svg" /></noscript>
+                        <img src="<?=base_url()?>assets/css/img/Vector.svg" data-lazy-src="<?=base_url()?>assets/css/images/Vector.svg" />
+                        <noscript><img src="<?=base_url()?>assets/css/img/Vector.svg" /></noscript>
                     </span>
                 </a>
                 </div>
