@@ -5,7 +5,7 @@
         <?=@$this->load->widget('banner');?>
         <?=@$this->load->widget('home_1');?>
         <?=@$this->load->widget('doitac');?>
-        <?=@$this->load->widget('menu_right');?>
+        <?=@$this->load->widget('home_khachhang');?>
         <div class="container">
             <div class="news">
                 <div class="section-title">

@@ -153,8 +153,9 @@ class Home extends MY_Controller
     }
 
     public function support(){ 
+        $data = array();
         $seo = array();
-        $this->LoadHeader($view=null,$seo,true);
+        $this->LoadHeader($view='common/header_support',$seo,true);
         $this->load->view('home/support',$data);
         $this->LoadFooter();
     }

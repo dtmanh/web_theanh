@@ -85,6 +85,7 @@
             /*begin load menu*/$data["menu_main"] = $this->load->widget("menu_main");/*end load menu*/
             /*begin load menu*/$data["menu_tag"] = $this->load->widget("menu_tag");/*end load menu*/
             $data['seo']=$seo;
+           
             if($view == null)
             {
                 $this->load->view('common/header', $data);
@@ -93,13 +94,12 @@
                 $this->load->view($view,$data);
             }
         }
-         public function LoadHeader2($view,$seo=array(),$show_slider=false)
+         public function LoadHeaderSupport($view,$seo=array(),$show_slider=false)
         {
             $data  = array();
           
             $data['count'] = $this->count_cart;
         
-
                 $data['menu_main_root'] = $this->system_model->getFields('menu','seturl,name,url,id,image',array('position'=>'main','parent_id'=>0,'lang' => $this->language),
                    array('sort'=>'')
                );
@@ -118,7 +118,7 @@
             $data['seo']=$seo;
             if($view == null)
             {
-                $this->load->view('common/header2', $data);
+                $this->load->view('common/header_support', $data);
             }
             else{
                 $this->load->view($view,$data);

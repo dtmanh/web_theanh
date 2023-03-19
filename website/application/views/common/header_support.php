@@ -56,28 +56,69 @@
     <div id="fb-root"></div>
     <div id="body-overlay"></div>
     <div id="overlay-support-center"></div>
-
     <?=@$this->load->widget('menu_top');?>
+   
     <div id="start-page">
          <div id="header-sticky">
             <div class="container">
                <header id="header-page">
                   <div class="logo-header">
                      <a href="<?=base_url();?>" id="logo">
-                        <img width="169" height="57" src="<?=base_url(@$this->option->site_logo); ?>" alt="<?=@$this->option->site_name; ?>" data-lazy-src="<?=@$this->option->site_logo; ?>">
+                        <img width="169" height="57" src="<?=base_url(@$this->option->site_logo); ?>" alt="<?=@$this->option->site_name; ?>" data-lazy-src="<?=base_url(@$this->option->site_logo); ?>">
                         <noscript><img width="169" height="57" src="<?=base_url(@$this->option->site_logo); ?>" alt="<?=@$this->option->site_name; ?>" ></noscript>
                      </a>
                   </div>
-                  <?=@$this->load->widget('menu_main');?>  
-                  <div class="button-menu">
-                     <a id="btn-registration">
-                        <span>Đăng ký</span>
-                        <span>
-                           <img src="<?=base_url()?>assets/css/img/Vector-2.svg" data-lazy-src="<?=base_url()?>assets/css/img/Vector-2.svg" />
-                           <noscript><img src="<?=base_url()?>assets/css/img/Vector-2.svg" /></noscript>
-                        </span>
-                     </a>
-                  </div>
+                  <ul class="main-menu">
+                     <li class="item-menu has-sub-menu" id="has-drop-menu-support">
+                        <a>
+                        Giới thiệu tổng quát
+                        </a>
+                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/commons/arrow.svg"/>
+                        <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/commons/arrow.svg"/></noscript>
+                        <div id="overview-support">
+                           <div class="item">
+                              <a href="../feature/bat-dau/index.html" class="drop">
+                                 <span class="icon">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/cai-dat-he-thong.svg">
+                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/cai-dat-he-thong.svg"></noscript>
+                                 </span>
+                                 <span class="name">
+                                 Bắt đầu
+                                 </span>
+                                 <span class="infor">
+                                 5 bước cơ bản để bắt đầu sử dụng 1Office
+                                 </span>
+                              </a>
+                           </div>
+                           <div class="item">
+                              <a href="../feature/nang-cao/index.html" class="drop">
+                                 <span class="icon">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/menu/cai-dat-nang-cao.svg">
+                                    <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/menu/cai-dat-nang-cao.svg"></noscript>
+                                 </span>
+                                 <span class="name">
+                                 Nâng cao
+                                 </span>
+                                 <span class="infor">
+                                 Hướng dẫn cơ bản về cài đặt nâng cao
+                                 </span>
+                              </a>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="item-menu has-sub-menu" id="has-drop-menu">
+                        <a>
+                        Hướng dẫn sử dụng
+                        </a>
+                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://1office.vn/wp-content/themes/1office/images/icons/commons/arrow.svg"/>
+                        <noscript><img src="https://1office.vn/wp-content/themes/1office/images/icons/commons/arrow.svg"/></noscript>
+                     </li>
+                     <li class="item-menu">
+                        <a href="../tip/faq-workplace/index.html">
+                        Câu hỏi thường gặp
+                        </a>
+                     </li>
+                  </ul>
                   <div id="open-mobile-menu">
                      <div class="all-line" id="button-open-mobile-menu">
                         <div class="line"></div>
@@ -86,6 +127,7 @@
                      </div>
                   </div>
                </header>
+               
             </div>
          </div>
 
