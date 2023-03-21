@@ -11,13 +11,13 @@
     </div>
     <div class="post-infor">
     <div class="post-date">
-        <img src="<?=base_url()?>assets/css/images/clock-2.svg" data-lazy-src="<?=base_url()?>assets/css/images/clock-2.svg" />
-        <noscript><img src="h<?=base_url()?>assets/css/images/clock-2.svg" /></noscript>
+        <img src="<?=base_url()?>assets/css/img/clock-2.svg" data-lazy-src="<?=base_url()?>assets/css/img/clock-2.svg" />
+        <noscript><img src="h<?=base_url()?>assets/css/img/clock-2.svg" /></noscript>
         <?=date("d/m/Y",$n->time);?>
     </div>
     <div class="post-views">
-        <img src="<?=base_url()?>assets/css/images/eye-2.svg" data-lazy-src="<?=base_url()?>assets/css/images/eye-2.svg" />
-        <noscript><img src="<?=base_url()?>assets/css/images/eye-2.svg" /></noscript>
+        <img src="<?=base_url()?>assets/css/img/eye-2.svg" data-lazy-src="<?=base_url()?>assets/css/img/eye-2.svg" />
+        <noscript><img src="<?=base_url()?>assets/css/img/eye-2.svg" /></noscript>
         <?= ($n->view); ?>
     </div>
     </div>
