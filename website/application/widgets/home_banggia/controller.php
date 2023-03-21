@@ -4,7 +4,12 @@ class Home_banggia_widget extends MY_Widget
 {
     // Nhận 2 biến truyền vào
     function index(){
-		$this->load->view('view');			
+      $data['page'] = $this->f_homemodel->getFirstRowWhere('staticpage',
+            array(
+                'hot' => 1,
+                'lang' => $this->language
+            ));
+            $this->load->view('view',$data);
 	
     }
 }

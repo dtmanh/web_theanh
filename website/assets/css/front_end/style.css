@@ -8634,10 +8634,52 @@ padding-bottom: 1rem;
     line-height: 1.4;
     font-weight: 400;
     }
+.section-title .f700{ font-weight: 700;}
+.section-title .f600{ font-weight: 600;}
+.section-title .s42{ font-size: 42px;}
+.section-title .s40{ font-size: 40px;}
+.custom_sub_title{
+  width: 46%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+}
+#btn-custom{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  line-height: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  height: 50px;
+  padding: 0 30px;
+  position: relative;
+  z-index: 2;
+  background: #f15822;
+  color: #333;
+  display: inline-block;
+  backface-visibility: hidden;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+#btn-registration.btn-banggia{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  line-height: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  height: 50px;
+  padding: 0 30px;
+  position: relative;
+  z-index: 2;
+  background: #f50057;
+  color: #fff;
+  border-radius: 10px;
+  display: inline-block;
+  backface-visibility: hidden;
+  white-space: nowrap;
+  text-transform: uppercase;
 
-
-
-
+}
 
 
 

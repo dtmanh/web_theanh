@@ -9,7 +9,7 @@
         <div class="container">
             <div class="news">
                 <div class="section-title">
-                <h2>củng trở thành nhà bán hàng tiếp theo, kinh doanh thành công với sapo</b></h2>
+                <h2>Cùng trở thành nhà bán hàng tiếp theo, kinh doanh thành công với sapo</b></h2>
                 </div>
                 <div class="button-website text-center">
                 <a href="javascript:void(0)" id="btn-registration">
@@ -25,7 +25,7 @@
         <?=@$this->load->widget('banner_baochi');?>
         <?=@$this->load->widget('home_banggia');?>
         <?=@$this->load->widget('question');?>
-        <?=@$this->load->widget('ykienkhachhang');?>
+        <!--?=@$this->load->widget('ykienkhachhang');?-->
         <?=@$this->load->widget('news_noibat_home');?>        
     </div>
  </section>

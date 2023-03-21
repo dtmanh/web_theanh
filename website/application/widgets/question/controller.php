@@ -4,13 +4,11 @@ class Question_widget extends MY_Widget
 {
     // Nhận 2 biến truyền vào
     function index(){
-        // $data = array();
-        // $data['itemId'] = $id;
-        // $data['usermail'] = $this->session->userdata('usermail');
-        // $data['username'] = $this->session->userdata('fullname');
-        //$data['avata'] = 'upload/img/avatar/'.$this->session->userdata('avt_dir') .'/'. $this->session->userdata('avatar');
-        $this->load->model('m_comment');
-        //echo "<pre>";var_dump($data['subs']);die();
+        $data['ykcustomer'] = $this->system_model->get_data('inuser_category',array(
+            'home' => 1,
+            'lang' => $this->language
+        ),array('sort' => 'desc'),5,0);
+
         $this->load->view('view',$data);
     }
 }

@@ -56,7 +56,6 @@
     <div id="fb-root"></div>
     <div id="body-overlay"></div>
     <div id="overlay-support-center"></div>
-
     <?=@$this->load->widget('menu_top');?>
     <div id="start-page">
          <div id="header-sticky">
