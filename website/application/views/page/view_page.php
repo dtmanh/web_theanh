@@ -1,37 +1,27 @@
-<section class="main-wrap">
-   <section class="container">
-      <section class="primary fleft">
-         <section class="block-tax-item">
-            <section class="block-breakcrumb">
-               <span><span><a href="<?=base_url()?>">Trang chủ</a> » <span><span class="breadcrumb_last" aria-current="page"><?= $page->name?></span></span></span></span>                
-            </section>
-            <!-- end .block-breakcrumb -->
-            <section class="block-tax-item-content">
-               <h1 class="single-title">
-                 <?= $page->name?>      
-               </h1>
-               <!-- end .single-title -->
-               <section class="single-content-wrap single-content">
-                  <?= $page->content?>
-               </section>
-               <!-- end .single-content-wrap -->
-               <section class="single-share">
-                  
-               </section>
-               <!-- end .single-share -->
-              
-               <!-- end .single-tag -->
-               <?=@$this->load->widget('content');?>              
-               <!-- end .single-comment -->
-            </section>
-            <!-- end .block-tax-item-content -->
-         </section>
-         <!-- end .block-tax-item -->
-      </section>
-      <!-- end .primary --> 
-      <section class="cboth"></section>
-      <!-- end .cboth -->
-   </section>
-   <!-- end .container --> 
+<section id="body-page">
+   <div class="single-layout" id="single-post">
+      <article class="post-8914 post type-post status-publish format-standard has-post-thumbnail hentry " id="post-id-<?= $page->id?>">
+         <?=@$this->load->widget('banner');?>   
+         <div class="container">
+            <div class="breadcrumb">
+               <a href="<?=base_url()?>">Trang chủ</a> » 
+              <?= $page->name?>
+            </div>
+            <div class="content">
+               <div class="post">
+                  <div class="infor-post">
+                     <div class="created-date"><?=date("d/m/Y",$page->time);?></div>
+                     <h1 style="margin: 0;" class="title-post"><?= $page->name?></h1>
+                  </div>
+                  <main id="main-post">
+                     <div class="detail-content">
+                        <?= $page->content?>
+                     </div>
+                  </main>
+               </div>
+               
+            </div>
+         </div>
+      </article>
+   </div>
 </section>
-<?=@$this->load->widget('doitac');?>

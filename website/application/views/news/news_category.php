@@ -7,7 +7,7 @@
                   <h2><?=@$cate_current->name?></h2>
                </div>
                <div class="section-sub-title">
-                  <h3>Chuyên mục blog tổng hợp đầy đủ các kiến thức, kinh nghiệm, kỹ năng giúp bạn nâng cao khả năng SEO tổng thể cũng như thực hiện hiệu quả các chiến lược Marketing trực tuyến của mình. </h3>
+                  <h3><?=@$cate_current->description?> </h3>
                </div>
                <section class="block-breakcrumb">
                   <span><span><a href="<?=base_url()?>">Home</a> » <span class="breadcrumb_last" aria-current="page"><?=@$cate_current->name?></span></span></span>
