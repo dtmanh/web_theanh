@@ -18,6 +18,7 @@ class Ajax extends MY_Controller
         $item = $this->system_model->getFirstRowWhere($table,array(
             'id' => $id
         ));
+        
         if(!empty($pathImage)){
             $link = $pathImage.'/'.$item->image;  
             // xoa anh thumb
@@ -30,17 +31,16 @@ class Ajax extends MY_Controller
             }
    
         }else{
-             $link = $item->image;
+            $link = $item->image;
         }
        
         $check = false;
-        if(count($item)){
+        if(isset($item)){
             $id = $this->system_model->Update_where($table,array('id'=>$id),array('image'=>''));
            // xoa anh san pham
             if(file_exists($link)){
                 @unlink($link);
             }
-            
             $mss_success ='<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
             <h4><i class="icon fa fa-success"></i> Thông báo!</h4>
             Xóa ảnh thành công !!!';    
@@ -63,7 +63,7 @@ class Ajax extends MY_Controller
             'id' => $id
         ));
 		$check = false;
-		if(count($item)){
+		if(isset($item)){
 			$id = $this->system_model->delete_where($table,array('id'=>$id));
 			if(file_exists($item->image)){
 				unlink(($item->image));

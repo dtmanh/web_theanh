@@ -174,6 +174,7 @@ $route['spreadsheet'] = 'PhpspreadsheetController';
 $route['spreadsheet/import'] = 'PhpspreadsheetController/import';
 $route['spreadsheet/export'] = 'PhpspreadsheetController/export';
 $route['support'] = "home/support";
+$route['bang-gia'] = "home/table_price";
 
 //filtes
 $route['loc-san-pham'] = 'filters/filter';
@@ -190,3 +191,5 @@ $route['phan-trang-home'] = 'ajax/ajax/phan_trang_pro_home';
 //Phan mem
 $route['pm'] = 'pm/Pm/index';
 $route['pm/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)'] = 'pm/$1/$2';
+
+// $route['([a-zA-Z0-9_-]+)'] = 'home/index';

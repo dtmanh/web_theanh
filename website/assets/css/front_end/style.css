@@ -3547,7 +3547,7 @@ img {
   top: 10px;
   width: 30px;
   height: 30px;
-  background: url("images/icons/commons/arrow.svg") no-repeat;
+  background: url("../img/arrow.svg") no-repeat;
   background-size: contain;
   background-position: center center;
   transition: all 0.5s;
@@ -8681,8 +8681,12 @@ padding-bottom: 1rem;
 
 }
 
-
-
+footer#footer-page .menu-footer ul li.page_item {
+  padding-bottom: 12px;
+}
+.category-page .body-category-page .list-all-post .box-post .excerpt p{
+  line-height: 30px;
+}
 
 
 
@@ -10811,3 +10815,50 @@ padding-bottom: 1rem;
     padding: 0;
   }
 }
+
+
+<div class="cj-small">
+                    
+                <div class="cj-shan">
+                        <div class="cj-jp">
+                            <div class="cj-title">Giải 3: iPhone 14pro MAX</div>
+                            <img class="cj-img" src="/images/drawing/iphone.png" alt="">
+                        </div>
+                    </div><div class="cj-shan">
+                        <div class="cj-jp">
+                            <div class="cj-title">Giải 7: bao lì xì  300.000</div>
+                            <img class="cj-img" src="/images/drawing/redPacket.png" alt="">
+                        </div>
+                    </div><div class="cj-shan">
+                        <div class="cj-jp">
+                            <div class="cj-title">Giải 4: 1 máy lạnh DAI KIN</div>
+                            <img class="cj-img" src="/images/drawing/air.png" alt="">
+                        </div>
+                    </div><div class="cj-shan">
+                        <div class="cj-jp">
+                            <div class="cj-title">Cảm ơn bạn đã tham gia</div>
+                            <img class="cj-img" src="/images/drawing/thanks.png" alt="">
+                        </div>
+                    </div><div class="cj-shan">
+                        <div class="cj-jp">
+                            <div class="cj-title">Giải 1: một chiếc xe mô tô BMW R 18</div>
+                            <img class="cj-img" src="/images/drawing/moto.png" alt="">
+                        </div>
+                    </div>
+                    <div class="cj-shan">
+                        <div class="cj-jp">
+                            <div class="cj-title">Giải 5: 1 máy hút bụi tự động</div>
+                            <img class="cj-img" src="/images/drawing/robot.png" alt="">
+                        </div>
+                    </div><div class="cj-shan">
+                        <div class="cj-jp">
+                            <div class="cj-title">Giải2:  1 Phiếu phúc lợi từ Quỹ</div>
+                            <img class="cj-img" src="/images/drawing/ticket.png" alt="">
+                        </div>
+                    </div><div class="cj-shan">
+                        <div class="cj-jp">
+                            <div class="cj-title">Giải 6: bao lì xì  500.000</div>
+                            <img class="cj-img" src="/images/drawing/redPacket.png" alt="">
+                        </div>
+                    </div>
+                    </div>

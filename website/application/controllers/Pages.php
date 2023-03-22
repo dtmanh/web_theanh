@@ -10,7 +10,7 @@
         }
 		public function page_content($alias){
 			$data = array();
-			$data['page']=$this->system_model->getField('staticpage','name,content,id,title_seo,description_seo,keyword_seo,image',array(
+			$data['page']=$this->system_model->getField('staticpage','name,alias,description,content,id,title_seo,description_seo,keyword_seo,image',array(
 				'alias'=>$alias,
 				'lang' => $this->language
 			),array(),true);

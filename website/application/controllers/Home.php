@@ -20,7 +20,8 @@ class Home extends MY_Controller
 
     public function index($var1= null , $var2 = null){
         if($var1 == null)
-        {
+        {   
+            
             $this->home();
         }else{
             $item = $this->f_homemodel->getFirstRowWhere('alias',array(
@@ -41,7 +42,7 @@ class Home extends MY_Controller
         			$var3 = '';
         		}
             }
-
+           
             switch (array($var3,$item->type)) {
                 // category
                 case array('','cate-pro'):
@@ -157,6 +158,20 @@ class Home extends MY_Controller
         $seo = array();
         $this->LoadHeader($view='common/header_support',$seo,true);
         $this->load->view('home/support',$data);
+        $this->LoadFooter();
+    }
+
+    public function table_price(){ 
+        $data = array();
+        $seo = array();
+        
+        $data['page'] = $this->system_model->getFirstRowWhere('staticpage',array(
+            'hot' => 1,
+            'lang' => $this->language
+        ));
+
+        $this->LoadHeader($view='',$seo,true);
+        $this->load->view('page/price',$data);
         $this->LoadFooter();
     }
 /**

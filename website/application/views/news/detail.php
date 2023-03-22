@@ -4,14 +4,13 @@
          <?=@$this->load->widget('banner');?>   
          <div class="container">
             <div class="breadcrumb">
-               <a href="<?=base_url()?>">Trang chủ</a> » 
-               <span><a href="<?=base_url('danh-muc-tin/'.$cate_current->alias.'.html')?>"><?=$cate_current->name?></a> »
-               <span class="breadcrumb_last" aria-current="page"><?= $news->title?>
+               <a href="<?=base_url()?>">Trang chủ</a> 
+               <a href="<?=base_url('new/'.$news->alias)?>"><?= $news->title?></a>
             </div>
             <div class="content">
                <div class="post">
                   <div class="infor-post">
-                     <div class="created-date"><?=date("d/m/Y",$news->time);?></div>
+                     <div class="created-date"><?=date("d/m/Y H:i:s",$news->time);?></div>
                      <h1 style="margin: 0;" class="title-post"><?= $news->title?></h1>
                   </div>
                   <main id="main-post">
@@ -22,6 +21,7 @@
 
                         <?=$news->content?>
                      </div>
+                     
                   </main>
                </div>
                
@@ -44,7 +44,7 @@
                         <?php if (count($new_same)) : ?>
                         <?php foreach ($new_same as $new) : ?>
                            <div class="swiper-slide">
-                           <?=@$this->load->views('temp/news', $new);?>
+                           <?=@$this->load->views('temp/news', array('n' => $new));?>
                            </div>
                            <?php endforeach; ?>
                         <?php endif; ?>  

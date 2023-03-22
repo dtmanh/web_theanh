@@ -6,12 +6,17 @@ class News_noibat_home_widget extends MY_Widget
     function index(){
         
         $this->load->model('f_newsmodel');
-            $data['news'] = $this->system_model->getFields('news','id,title,focus,image,alias,description',array(
+            $data['news'] = $this->system_model->getFields('news','id,title,focus,image,alias,description,category_id, time',array(
             //'home' => 1,
             'lang' => $this->language,
             'focus' => 1,
             ),6,0);
-          //var_dump($data['news']);die;
+            foreach ($data['news'] as $key => $cat) {
+                $data['news'][$key]->cat_name =  $this->system_model->getField('news_category','id,name,alias',array(
+                   'id' => $cat->category_id,
+                    ));
+            }
+            // var_dump($data['news']);die;
 	    $this->load->view('view',$data);
     }
 }

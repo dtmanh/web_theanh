@@ -8,7 +8,7 @@
             <div class="swiper-wrapper">
                 <?php 
                   foreach ($news as $key => $new) { ?>
-                     <?=@$this->load->views('temp/news', $new);?>
+                     <?=@$this->load->views('temp/news', array('n' => $new));?>
                 <?php } ?>    
             </div>
             <div class="custom-paginate">

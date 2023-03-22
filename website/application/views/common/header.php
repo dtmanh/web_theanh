@@ -63,7 +63,7 @@
                <header id="header-page">
                   <div class="logo-header">
                      <a href="<?=base_url();?>" id="logo">
-                        <img width="169" height="57" src="<?=base_url(@$this->option->site_logo); ?>" alt="<?=@$this->option->site_name; ?>" data-lazy-src="<?=@$this->option->site_logo; ?>">
+                        <img width="169" height="57" src="<?=base_url(@$this->option->site_logo); ?>" alt="<?=@$this->option->site_name; ?>" data-lazy-src="<?=base_url(@$this->option->site_logo); ?>">
                         <noscript><img width="169" height="57" src="<?=base_url(@$this->option->site_logo); ?>" alt="<?=@$this->option->site_name; ?>" ></noscript>
                      </a>
                   </div>

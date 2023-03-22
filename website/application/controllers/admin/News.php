@@ -562,9 +562,8 @@
              }else{
                 $this->session->set_flashdata("mess", "Xóa không thành công ! <br />Còn danh mục con");
              }
-            
-             redirect($this->agent->referrer(), 'refresh');
-            // redirect($_SERVER['HTTP_REFERER']);
+            //  redirect($this->agent->referrer(), 'refresh');
+            redirect($_SERVER['HTTP_REFERER']);
         }
         //Delete Cate News
         public function deletes_category()
@@ -587,7 +586,10 @@
 					'id' => $id
 				));
                 $ip=explode('upload/img/category/', $item->image);
-                $bi='upload/img/category/thumb/'.$ip[1];
+                if($ip[1]){
+                    $bi='upload/img/category/thumb/'.$ip[1];
+                }
+                
 				// xoa anh trong thu muc
 				if(file_exists($item->image) and $item){
 					@unlink($item->image);

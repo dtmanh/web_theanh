@@ -3,11 +3,10 @@
 class Banner_price_widget extends MY_Widget
 {
     // Nhận 2 biến truyền vào
-    function index($alias){
+    function index(){
 
         $data = array();
 
-        $data['alias'] = $alias;
         $this->load->view('view',$data);
     }
 }

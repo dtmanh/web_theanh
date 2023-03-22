@@ -1,27 +1,32 @@
 <section id="body-page">
-   <div class="single-layout" id="single-post">
-      <article class="post-8914 post type-post status-publish format-standard has-post-thumbnail hentry " id="post-id-<?= $page->id?>">
-         <?=@$this->load->widget('banner');?>   
+    <div class="support-page">
+    <?=@$this->load->widget('banner');?>   	
+   <div class="section-full-width">
+      <div class="bgr-banner" style="background: #f7f9fa;">
          <div class="container">
-            <div class="breadcrumb">
-               <a href="<?=base_url()?>">Trang chủ</a> » 
-              <?= $page->name?>
-            </div>
-            <div class="content">
-               <div class="post">
-                  <div class="infor-post">
-                     <div class="created-date"><?=date("d/m/Y",$page->time);?></div>
-                     <h1 style="margin: 0;" class="title-post"><?= $page->name?></h1>
+               <div class="body-support">
+                  <div class="bread-crumb">
+                     <ul>
+                           <li>
+                              <a href="<?=base_url()?>">Trang chủ <span>›</span></a>
+                           </li>
+                           <li>
+                              <a class="active" href="<?=base_url($page->alias.'.html')?>"><?= $page->name?></a>
+                           </li>
+                     </ul>
                   </div>
-                  <main id="main-post">
-                     <div class="detail-content">
+                 <div class="main-content" style="width: 100%;">
+                    <article id="post-support">
+                        <h1 class="title-post"><?= $page->name?></h1>
+                        <div class="excerpt-post"><?= $page->description?> </div>
+                        <div class="content">
                         <?= $page->content?>
-                     </div>
-                  </main>
+                        </div>
+                    </article>
+                  </div>
                </div>
-               
             </div>
          </div>
-      </article>
+      </div>   
    </div>
 </section>

@@ -17,8 +17,8 @@
                <div class="list-all-post">
                   <div class="section-list-col-3 section-list-col-4">
                   <?php if (count($list)) {
-                  foreach ($list as $key => $new) { ?>
-                     <?=@$this->load->views('temp/news', $new);?>
+                  foreach ($list as $key => $n) { ?>
+                     <?=@$this->load->views('temp/news', array('n' => $n));?>
                      <?php } } ?>                          
                   </div>
                   <div class="text-center" id="pagination">
@@ -27,7 +27,7 @@
                </div>
                <div class="row-blog-page">
                   <div class="col-left custom-col-full">
-                  <?=@$this->load->widget('news_nb');?>
+                  <!--?=@$this->load->widget('news_nb');?-->
                   </div>
                </div>
             </div>

@@ -11,34 +11,33 @@
                 <div id="post-news">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">  
-                        <?php 
-                            foreach ($news as $key => $new) { ?>
+                        <?php  foreach ($news as $key => $new) { ?>
                             <div class="swiper-slide">
                                 <div class="box-news">
                                     <div class="img-news">
                                         <a href="<?= base_url($n->alias.'.html') ?>">
-                                        <img width="2400" height="1374" src="<?= base_url($n->image) ?>" data-lazy-src="<?= base_url($n->image) ?>">
-                                        <noscript><img width="2400" height="1374" src="<?= base_url($n->image) ?>"></noscript>
+                                        <img width="2400" height="1374" src="<?= base_url($new->image) ?>" data-lazy-src="<?= base_url($new->image) ?>">
+                                        <noscript><img width="2400" height="1374" src="<?= base_url($new->image) ?>"></noscript>
                                         </a>
                                     </div>
                                     <div class="date-news">
-                                    <?=date("d/m/Y",$n->time);?>                                                             
+                                        <?=date("d/m/Y",$new->time);?>                                                             
                                         <div class="name-news">
-                                        <a href="#">Diễn đàn doanh nghiệp</a>
+                                        <a href="<?= base_url($new->cat_name->alias.'.html') ?>"><?=($new->cat_name->name); ?> </a>
                                         </div>
                                     </div>
                                     <div class="title-news">
-                                        <a href="<?= base_url($n->alias.'.html') ?>">
+                                        <a href="<?= base_url($new->alias.'.html') ?>">
                                         <h2>
-                                        <?=($n->title); ?>                                                                   
+                                        <?=($new->title); ?>                                                                   
                                         </h2>
                                         </a>
                                     </div>
                                     <div class="excerpt-news">
-                                    <?= LimitString($n->description, 100, '...'); ?>
+                                        <?=strip_tags(LimitString($new->description, 350, '...')); ?>
                                     </div>
                                     <div class="more-news">
-                                        <a href="<?= base_url($n->alias.'.html') ?>">
+                                        <a href="<?= base_url($new->alias.'.html') ?>">
                                         Đọc tiếp >
                                         </a>
                                     </div>
