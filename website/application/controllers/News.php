@@ -34,7 +34,7 @@ class News extends MY_Controller
         $data = array();
         // thong so phan trang
         $data['crop_news_category'] = $this->f_newsmodel->getField('config_pagination','width,height,pagination',array('lang' => $this->language,'name_table'=>'news_category'));
-        $data['cate_current'] = $current = $this->f_newsmodel->getField('news_category','name,id,alias,title_seo,description_seo,keyword,image',array('alias'=>$alias));
+        $data['cate_current'] = $current = $this->f_newsmodel->getField('news_category','name,description,id,alias,title_seo,description_seo,keyword,image',array('alias'=>$alias));
 
         //if(empty($data['cate_current'])){ redirect(base_url('404_override')); }
         $config['base_url'] = base_url('danh-muc-tin/'.$alias.'.html');

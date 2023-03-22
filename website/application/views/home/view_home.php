@@ -9,16 +9,16 @@
         <div class="container">
             <div class="news">
                 <div class="section-title">
-                <h2>Cùng trở thành nhà bán hàng tiếp theo, kinh doanh thành công với sapo</b></h2>
+                <h2>củng trở thành nhà bán hàng tiếp theo, kinh doanh thành công với sapo</h2>
                 </div>
                 <div class="button-website text-center">
-                <a href="javascript:void(0)" id="btn-registration">
-                    Dùng thử miền phí
-                    <span>
-                        <img src="<?=base_url()?>assets/css/img/Vector.svg" data-lazy-src="<?=base_url()?>assets/css/images/Vector.svg" />
-                        <noscript><img src="<?=base_url()?>assets/css/img/Vector.svg" /></noscript>
-                    </span>
-                </a>
+                    <a href="javascript:void(0)" id="btn-registration">
+                        Dùng thử miền phí
+                        <span>
+                            <img src="<?=base_url()?>assets/css/img/Vector.svg" data-lazy-src="<?=base_url()?>assets/css/images/Vector.svg" />
+                            <noscript><img src="<?=base_url()?>assets/css/img/Vector.svg" /></noscript>
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>

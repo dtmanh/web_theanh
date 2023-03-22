@@ -148,8 +148,6 @@ $(window).scroll(function () {
 
 // slider
 
-
-
  $(function() {
          $(".slider-main").owlCarousel({
         items: 1,
@@ -223,4 +221,32 @@ $(window).scroll(function () {
         animateIn: false, // default: false
         center: false,
     });
+
+    var ToC =
+    "<p class='toc_title'>Mục lục</p>" +
+    "<ul class='toc_list'>";
+
+        var newLine, el, title, link;
+
+        $("#single-post .detail-content h3").each(function() {
+
+        el = $(this);
+        title = el.text();
+        link = "#" + el.attr("id");
+
+        newLine =
+            "<li>" +
+            "<a href='" + link + "'>" +
+                title +
+            "</a>" +
+            "</li>";
+
+        ToC += newLine;
+
+        });
+
+        ToC +=
+        "</ul>";
+
+        $("#toc_container").prepend(ToC);
 });
